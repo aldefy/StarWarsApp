@@ -58,7 +58,7 @@ Clone the project and review the code or simply download the apk.
 
 ### Prerequisites
 
-Android Studio 4.1.3
+Android Studio 4.2.1
 Java 1.8
 
 ### Installation
