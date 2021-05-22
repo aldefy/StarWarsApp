@@ -22,6 +22,7 @@ ext {
 
     androidxDependencies = [
             androidxAppCompat          : "androidx.appcompat:appcompat:${AndroidxAppCompatVersion}",
+            androidXKtx                : "androidx.activity:activity-ktx:${AndroidxAppCompatVersion}",
             androidxCore               : "androidx.core:core-ktx:${AndroidxCoreVersion}",
             androidxContraintLayout    : "androidx.constraintlayout:constraintlayout:${AndroidxConstraintLayoutVersion}",
             androidxLifecycle          : "androidx.lifecycle:lifecycle-extensions:${AndroidxLifeCycleVersion}",
