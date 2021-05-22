@@ -2,4 +2,7 @@ include ':core'
 include ':navigation'
 include ':common'
 include ':app'
+include ':search'
+
+project(":search").projectDir = new File(rootDir, "feature/search")
 rootProject.name = "Star Wars Universe"
