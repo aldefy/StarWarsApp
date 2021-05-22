@@ -1,0 +1,53 @@
+plugins {
+    id 'com.android.library'
+}
+apply from: '../dependencies.gradle'
+apply from: '../common-plugins.gradle'
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        debug {
+            buildConfigField "String", "BASE_URL", api
+        }
+        release {
+            buildConfigField "String", "BASE_URL", api
+
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    api kotlin
+    kapt compilers
+    api gson
+    api rx
+    api network
+    api hilt
+    api androidX
+    implementation loggingLibs
+
+    debugApi "com.github.chuckerteam.chucker:library:3.4.0"
+    releaseApi "com.github.chuckerteam.chucker:library-no-op:3.4.0"
+}

@@ -1,4 +1,4 @@
-package com.star.wars.common
+package com.star.wars.core
 
 import com.chuckerteam.chucker.api.ChuckerCollector
 import timber.log.Timber
