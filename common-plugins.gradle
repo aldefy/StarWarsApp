@@ -1,0 +1,6 @@
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-parcelize'
+apply plugin: 'base'
+apply plugin: 'dagger.hilt.android.plugin'
+apply plugin: 'androidx.navigation.safeargs.kotlin'
