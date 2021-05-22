@@ -1,0 +1,55 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+}
+apply from: '../dependencies.gradle'
+apply from: '../common-plugins.gradle'
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    api kotlin
+    api hilt
+    api rx
+    api loggingLibs
+    implementation gson
+    kapt compilers
+
+    debugApi "com.squareup.okhttp3:mockwebserver:4.0.1"
+    api("org.junit.jupiter:junit-jupiter-api:5.6.2") { exclude group: 'org.jetbrains.kotlin' }
+    api("org.junit.jupiter:junit-jupiter-params:5.6.2") { exclude group: 'org.jetbrains.kotlin' }
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:5.6.2"
+    testApi("org.mockito:mockito-core:3.0.0") { exclude group: 'org.jetbrains.kotlin' }
+    api("androidx.arch.core:core-testing:2.1.0") { exclude group: 'org.jetbrains.kotlin' }
+    api("org.mockito:mockito-inline:2.28.2") { exclude group: 'org.jetbrains.kotlin' }
+    api("com.nhaarman:mockito-kotlin:1.6.0") { exclude group: 'org.jetbrains.kotlin' }
+    kaptAndroidTest testing
+    testImplementation testing
+}
