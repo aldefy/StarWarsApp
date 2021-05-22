@@ -51,15 +51,6 @@ ext {
     ]
     gson = gsonDependencies.values()
 
-    chuckerDependencies = [
-            chucker: "com.github.ChuckerTeam.Chucker:library:${ChuckerVersion}"
-    ]
-    chucker = chuckerDependencies.values()
-    chuckerNoOpDependencies = [
-            chucker: "com.github.ChuckerTeam.Chucker:library-no-op:${ChuckerVersion}"
-    ]
-    chuckerNoOp = chuckerNoOpDependencies.values()
-
     googleDependencies = [
             googleMaterial: "com.google.android.material:material:${GoogleMaterialVersion}"
     ]
