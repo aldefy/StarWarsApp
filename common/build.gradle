@@ -41,6 +41,10 @@ dependencies {
     api loggingLibs
     implementation gson
     kapt compilers
+    api androidX
+    api network
+    debugImplementation "com.github.chuckerteam.chucker:library:3.4.0"
+    releaseImplementation "com.github.chuckerteam.chucker:library-no-op:3.4.0"
 
     debugApi "com.squareup.okhttp3:mockwebserver:4.0.1"
     api("org.junit.jupiter:junit-jupiter-api:5.6.2") { exclude group: 'org.jetbrains.kotlin' }
