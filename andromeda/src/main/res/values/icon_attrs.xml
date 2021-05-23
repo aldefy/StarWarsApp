@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources >
+    <attr name="icon_name" format="enum">
+        <enum name="notification" value="0" />
+        <enum name="navigation_back" value="1"/>
+        <enum name="cancel" value="3"/>
+        <enum name="share" value="4"/>
+        <enum name="switch_theme" value="5"/>
+        <enum name="navigation_options" value="6"/>
+        <enum name="navigation_overflow" value="7"/>
+    </attr>
+</resources>
