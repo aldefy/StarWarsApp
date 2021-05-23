@@ -13,4 +13,18 @@
     <attr name="fill_error_secondary" format="color" />
     <attr name="fill_inactive_secondary" format="color" />
     <attr name="fill_background_secondary" format="color" />
+
+    <attr name="icon_static_black" format="color" />
+    <attr name="icon_static_white" format="color" />
+    <attr name="icon_static_grey_inactive" format="color" />
+
+    <attr name="icon_dynamic_default" format="color" />
+    <attr name="icon_dynamic_inverted" format="color" />
+    <attr name="icon_dynamic_red_error" format="color" />
+    <attr name="icon_static_payments" format="color" />
+    <attr name="icon_static_inactive" format="color" />
+    <attr name="icon_dynamic_active" format="color" />
+    <attr name="icon_dynamic_inactive" format="color" />
+    <attr name="icon_dynamic_error" format="color" />
+
 </resources>
