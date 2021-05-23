@@ -40,6 +40,8 @@ android {
 dependencies {
     implementation kotlin
     implementation hilt
+    implementation network
+    implementation rx
     kapt compilers
     implementation project(':common')
 }
