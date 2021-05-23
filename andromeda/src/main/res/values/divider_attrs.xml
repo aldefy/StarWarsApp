@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="AndromedaDivider">
+        <attr name="divider_type" format="enum">
+            <enum name="plain" value="0" />
+            <enum name="dotted" value="1" />
+            <enum name="big" value="2" />
+        </attr>
+    </declare-styleable>
+</resources>
