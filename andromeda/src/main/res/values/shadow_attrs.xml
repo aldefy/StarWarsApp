@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="AndromedaShadowLayout">
+        <attr name="corner_radius" format="dimension" />
+        <attr name="sl_type" format="enum">
+            <enum name="low" value="0" />
+            <enum name="high" value="1" />
+        </attr>
+        <attr name="enable_shadow_left" format="boolean" />
+        <attr name="enable_shadow_right" format="boolean" />
+        <attr name="enable_shadow_top" format="boolean" />
+        <attr name="enable_shadow_bottom" format="boolean" />
+        <attr name="force_shadow" format="boolean" />
+        <attr name="shadow_enabled" format="boolean" />
+    </declare-styleable>
+
+    <attr name="shadow_low_x" format="dimension" />
+    <attr name="shadow_low_y" format="dimension" />
+    <attr name="shadow_low_blur" format="dimension" />
+    <attr name="shadow_low_color" format="color" />
+
+    <attr name="shadow_high_x" format="dimension" />
+    <attr name="shadow_high_y" format="dimension" />
+    <attr name="shadow_high_blur" format="dimension" />
+    <attr name="shadow_high_color" format="color" />
+</resources>
