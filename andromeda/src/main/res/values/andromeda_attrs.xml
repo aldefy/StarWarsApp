@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="AndromedaGlobalAttributes">
+        <attr name="text" format="string" />
+        <attr name="title" format="string" />
+        <attr name="subtitle" format="string" />
+        <attr name="label" format="string" />
+        <attr name="loading" format="boolean" />
+        <attr name="enabled" format="boolean" />
+        <attr name="badge_text" format="string" />
+        <attr name="icon_color_token" format="reference" />
+        <attr name="accessibility_description" format="string" />
+        <attr name="loading_state_content_description" format="string" />
+        <attr name="cta_accessibility_description" format="string" />
+    </declare-styleable>
+</resources>
