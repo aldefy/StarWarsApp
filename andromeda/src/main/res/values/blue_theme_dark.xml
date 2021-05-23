@@ -14,6 +14,13 @@
         <item name="fill_background_tertiary" category="color">#FFFFFFFF</item>
         <item name="fill_pressed" category="color">#1AFFFFFF</item>
 
+        <item name="border_active" category="color">#8c2962FF</item>
+        <item name="border_pressed" category="color">#1AFFFFFF</item>
+        <item name="border_inactive" category="color">#FF8E8E8E</item>
+        <item name="border_static_white" category="color">#FFFFFFFF</item>
+        <item name="border_focus" category="color">#FF777777</item>
+        <item name="border_error" category="color">#FFFF323D</item>
+        <item name="border_mute_primary" category="color">#FF606161</item>
         
         <item name="icon_static_black" category="color">#FF1C1D1D</item>
         <item name="icon_static_white" category="color">#FFFFFFFF</item>

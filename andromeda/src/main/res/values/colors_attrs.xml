@@ -27,4 +27,12 @@
     <attr name="icon_dynamic_inactive" format="color" />
     <attr name="icon_dynamic_error" format="color" />
 
+    <attr name="border_active" format="color" />
+    <attr name="border_pressed" format="color" />
+    <attr name="border_inactive" format="color" />
+    <attr name="border_static_white" format="color" />
+    <attr name="border_mute_primary" format="color" />
+    <attr name="border_focus" format="color" />
+    <attr name="border_error" format="color" />
+
 </resources>

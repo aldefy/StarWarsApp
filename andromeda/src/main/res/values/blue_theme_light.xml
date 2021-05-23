@@ -24,6 +24,13 @@
         <item name="spacing_10x" category="spacing">40dp</item>
         <item name="spacing_16x" category="spacing">64dp</item>
 
+        <item name="border_active" category="color">#FF2962FF</item>
+        <item name="border_pressed" category="color">#1A000000</item>
+        <item name="border_inactive" category="color">#FFBBBBBB</item>
+        <item name="border_static_white" category="color">#FFFFFFFF</item>
+        <item name="border_focus" category="color">#FF1C1D1D</item>
+        <item name="border_error" category="color">#FFEA001F</item>
+        <item name="border_mute_primary" category="color">#FFE8E8E8</item>
         <item name="icon_static_black" category="color">#FF1C1D1D</item>
         <item name="icon_static_white" category="color">#FFFFFFFF</item>
         <item name="icon_static_inactive" category="color">#FF606161</item>
