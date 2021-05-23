@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="AndromedaCircularButton">
+        <attr name="enabled" />
+        <attr name="icon_name" />
+        <attr name="icon_color_token" />
+        <attr name="circular_btn_type" format="enum">
+            <enum name="circular_primary_large" value="0" />
+            <enum name="circular_primary_regular" value="1" />
+            <enum name="circular_secondary_regular" value="2" />
+            <enum name="circular_white_primary" value="3"/>
+            <enum name="circular_grey_primary" value="4"/>
+        </attr>
+        <attr name="loading" />
+        <attr name="accessibility_description" />
+        <attr name="loading_state_content_description" />
+    </declare-styleable>
+
+</resources>

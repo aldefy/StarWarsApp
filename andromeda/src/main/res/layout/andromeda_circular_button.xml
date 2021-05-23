@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:parentTag="android.widget.FrameLayout">
+
+    <com.star.wars.andromeda.views.shadow.AndromedaShadowLayout
+        android:id="@+id/shadow_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:corner_radius="56dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/circular_btn"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/andromeda_circular_button_background"
+            android:textAlignment="center" />
+
+    </com.star.wars.andromeda.views.shadow.AndromedaShadowLayout>
+
+    <com.star.wars.andromeda.views.spinner.AndromedaSpinner
+        android:id="@+id/as_loading_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:importantForAccessibility="no"
+        android:visibility="gone"
+        app:spinner_type="small"
+        tools:ignore="ContentDescription" />
+</merge>
