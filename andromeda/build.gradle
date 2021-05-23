@@ -2,6 +2,7 @@ plugins {
     id 'com.android.library'
     id 'kotlin-android'
     id 'kotlin-parcelize'
+    id 'kotlin-kapt'
 }
 apply from: '../dependencies.gradle'
 
@@ -36,11 +37,21 @@ android {
     }
 }
 
+project.android.buildTypes.all { buildType ->
+    buildType.javaCompileOptions.annotationProcessorOptions.arguments =
+            [
+                    // Validation is disabled in production to remove the runtime overhead
+                    validateEpoxyModelUsage     : "false"
+            ]
+}
+
 dependencies {
     implementation kotlin
     api androidX
     api google
     api 'com.airbnb.android:lottie:3.7.0'
+    api 'com.airbnb.android:epoxy:4.3.1'
+    kapt 'com.airbnb.android:epoxy-processor:4.3.1'
 
     implementation("io.coil-kt:coil:1.1.1")
 }
