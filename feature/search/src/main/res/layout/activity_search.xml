@@ -13,18 +13,14 @@
         layout="@layout/layout_search_bar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="?spacing_2x"
-        android:layout_marginTop="?spacing_2x"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/navBarLayout" />
-
 
     <com.star.wars.andromeda.views.list.AndromedaListView
         android:id="@+id/contentRV"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="?spacing_x"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/layout_search" />

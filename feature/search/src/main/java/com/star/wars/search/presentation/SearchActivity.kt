@@ -1,10 +1,13 @@
 package com.star.wars.search.presentation
 
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
+import android.widget.Toast
 import androidx.activity.viewModels
-import com.star.wars.andromeda.tokens.icon_dynamic_default
-import com.star.wars.andromeda.views.assets.icon.Icon
-import com.star.wars.andromeda.views.navbar.AndromedaNavBar
+import com.star.wars.andromeda.AndromedaTheme
+import com.star.wars.andromeda.theme.getTheme
+import com.star.wars.andromeda.theme.setTheme
 import com.star.wars.common.addTo
 import com.star.wars.common.base.BaseActivity
 import com.star.wars.common.viewBinding
@@ -26,20 +29,7 @@ class SearchActivity : BaseActivity<SearchState>() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
-        initNavBar()
         setUpHandlers()
-    }
-
-    private fun initNavBar() {
-        with(binding.navBarLayout.navBar) {
-            setTitle(resources.getString(R.string.navbar_search_title))
-            setSubtitle(resources.getString(R.string.navbar_search_subtitle))
-            showNavigationIcon(Icon.NAVIGATION_BACK, listener = {
-                finish()
-            })
-            setNavigationLogo(Icon.UNIVERSE, icon_dynamic_default)
-            divider = AndromedaNavBar.Divider.LINE
-        }
     }
 
     private fun setUpHandlers() {
@@ -53,7 +43,11 @@ class SearchActivity : BaseActivity<SearchState>() {
         )
         screen.bind(binding, state.share())
             .addTo(compositeBag)
+
         screen.addSearchHandler(binding)
+        screen.addDeeplinkHandler(binding)
+        screen.initNavBar(binding, R.menu.menu_search)
+
         screen.event.observe(
             this,
             { event ->
@@ -68,8 +62,35 @@ class SearchActivity : BaseActivity<SearchState>() {
                         //TODO - add a clear logic on list
                     }
                     is SearchEvent.SearchTriggeredEvent -> vm.searchCharacter(event.searchText)
+                    is SearchEvent.DeepLinkFiredEvent -> {
+                        Toast.makeText(
+                            this,
+                            "Deeplink fired: ${event.deepLink}",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    is SearchEvent.CloseScreen -> {
+                        finish()
+                    }
+                    is SearchEvent.ShowThemeChooserEvent -> {
+                        toggleTheme()
+                    }
                 }
             }
         )
+    }
+
+    private fun toggleTheme() {
+        if(getTheme(this).isDarkTheme){
+            setTheme(this, AndromedaTheme.LIGHT)
+        }
+        else {
+            setTheme(this, AndromedaTheme.DARK)
+        }
+        val intent = intent
+        Handler(Looper.myLooper()!!).postDelayed({
+            finish()
+            startActivity(intent)
+        }, 100)
     }
 }

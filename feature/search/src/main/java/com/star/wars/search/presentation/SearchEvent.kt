@@ -7,4 +7,7 @@ sealed class SearchEvent {
     data class SearchErrorEvent(val message: String) : SearchEvent()
     data class SearchResultsFetched(val tabs: List<ComponentData>) : SearchEvent()
     object SearchCleared : SearchEvent()
+    data class DeepLinkFiredEvent(val deepLink: String) : SearchEvent()
+    object CloseScreen : SearchEvent()
+    object ShowThemeChooserEvent : SearchEvent()
 }

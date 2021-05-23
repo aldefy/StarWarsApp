@@ -1,12 +1,17 @@
 package com.star.wars.search.presentation
 
+import androidx.annotation.MenuRes
 import androidx.core.widget.doOnTextChanged
 import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.star.wars.andromeda.extensions.makeGone
 import com.star.wars.andromeda.extensions.makeVisible
+import com.star.wars.andromeda.tokens.icon_dynamic_default
+import com.star.wars.andromeda.views.assets.icon.Icon
+import com.star.wars.andromeda.views.navbar.AndromedaNavBar
 import com.star.wars.common.addTo
+import com.star.wars.search.R
 import com.star.wars.search.databinding.ActivitySearchBinding
 import com.star.wars.search.domain.SearchState
 import io.reactivex.Observable
@@ -49,6 +54,31 @@ class SearchScreenImpl : SearchScreen {
                     _event.value = SearchEvent.SearchTriggeredEvent(text.toString())
                 }
             }
+        }
+    }
+
+    fun addDeeplinkHandler(
+        binding: ActivitySearchBinding
+    ) {
+        binding.contentRV.setDeepLinkHandler {
+            _event.value = SearchEvent.DeepLinkFiredEvent(it)
+        }
+    }
+
+    fun initNavBar(binding: ActivitySearchBinding, @MenuRes menu: Int) {
+        with(binding.navBarLayout.navBar) {
+            setTitle(resources.getString(R.string.navbar_search_title))
+            setSubtitle(resources.getString(R.string.navbar_search_subtitle))
+            showNavigationIcon(Icon.NAVIGATION_BACK, listener = {
+                _event.value = SearchEvent.CloseScreen
+            })
+            inflateMenu(menu) {
+                if (it == R.id.menu_theme) {
+                    _event.value = SearchEvent.ShowThemeChooserEvent
+                }
+            }
+            setNavigationLogo(Icon.UNIVERSE, icon_dynamic_default)
+            divider = AndromedaNavBar.Divider.LINE
         }
     }
 
