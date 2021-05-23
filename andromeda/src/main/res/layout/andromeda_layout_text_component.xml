@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/fill_background_primary"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <com.star.wars.andromeda.views.text.AndromedaTextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="start"
+        android:maxLines="100"
+        app:typographyStyle="title_moderate_demi_default"
+        tools:text="@tools:sample/lorem" />
+
+</LinearLayout>
