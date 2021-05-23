@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     app:cardElevation="?spacing_x"
+    app:cardCornerRadius="?spacing_3x"
     app:cardUseCompatPadding="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -21,6 +22,7 @@
             android:layout_marginEnd="?spacing_2x"
             android:layout_marginBottom="?spacing_3x"
             app:icon_name="search"
+            app:icon_color_token="?icon_dynamic_default"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/inputSearch"
             app:layout_constraintStart_toStartOf="parent"
