@@ -1,5 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="?spacing_x"
+    app:cardUseCompatPadding="true">
 
-</layout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <com.star.wars.andromeda.views.icons.AndromedaIconView
+            android:id="@+id/iconSearch"
+            android:layout_width="?spacing_6x"
+            android:layout_height="?spacing_6x"
+            android:layout_marginStart="?spacing_2x"
+            android:layout_marginTop="?spacing_3x"
+            android:layout_marginEnd="?spacing_2x"
+            android:layout_marginBottom="?spacing_3x"
+            app:icon_name="search"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/inputSearch"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/inputSearch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="?spacing_2x"
+            android:layout_marginEnd="?spacing_2x"
+            android:background="@null"
+            android:hint="@string/search_character"
+            android:singleLine="true"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+            app:layout_constraintBottom_toBottomOf="@+id/iconSearch"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iconSearch"
+            app:layout_constraintTop_toTopOf="@+id/iconSearch" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
