@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="AndromedaTextView">
+        <attr name="typographyStyle" format="enum">
+            <enum name="title_hero_default" value="0" />
+            <enum name="title_hero_inactive" value="1" />
+            <enum name="title_hero_active" value="2" />
+            <enum name="title_hero_error" value="3" />
+            <enum name="title_hero_static_white" value="4" />
+            <enum name="title_hero_inverted" value="5" />
+
+            <enum name="title_extra_large_default" value="6" />
+            <enum name="title_extra_large_inactive" value="7" />
+            <enum name="title_extra_large_active" value="8" />
+            <enum name="title_extra_large_error" value="9" />
+            <enum name="title_extra_large_static_white" value="10" />
+            <enum name="title_extra_large_inverted" value="11" />
+
+            <enum name="title_large_default" value="12" />
+            <enum name="title_large_inactive" value="13" />
+            <enum name="title_large_active" value="14" />
+            <enum name="title_large_error" value="15" />
+            <enum name="title_large_static_white" value="16" />
+            <enum name="title_large_inverted" value="17" />
+
+            <enum name="title_moderate_bold_default" value="18" />
+            <enum name="title_moderate_bold_inactive" value="19" />
+            <enum name="title_moderate_bold_active" value="20" />
+            <enum name="title_moderate_bold_error" value="21" />
+            <enum name="title_moderate_bold_static_white" value="22" />
+            <enum name="title_moderate_bold_inverted" value="23" />
+
+            <enum name="title_moderate_demi_default" value="24" />
+            <enum name="title_moderate_demi_inactive" value="25" />
+            <enum name="title_moderate_demi_active" value="26" />
+            <enum name="title_moderate_demi_error" value="27" />
+            <enum name="title_moderate_demi_static_white" value="28" />
+            <enum name="title_moderate_demi_inverted" value="29" />
+
+            <enum name="title_small_bold_default" value="30" />
+            <enum name="title_small_bold_inactive" value="31" />
+            <enum name="title_small_bold_active" value="32" />
+            <enum name="title_small_bold_error" value="33" />
+            <enum name="title_small_bold_static_white" value="34" />
+            <enum name="title_small_bold_inverted" value="35" />
+
+            <enum name="title_small_demi_default" value="36" />
+            <enum name="title_small_demi_inactive" value="37" />
+            <enum name="title_small_demi_active" value="38" />
+            <enum name="title_small_demi_error" value="39" />
+            <enum name="title_small_demi_static_white" value="40" />
+            <enum name="title_small_demi_inverted" value="41" />
+
+            <enum name="title_tiny_bold_default" value="42" />
+            <enum name="title_tiny_bold_inactive" value="43" />
+            <enum name="title_tiny_bold_active" value="44" />
+            <enum name="title_tiny_bold_error" value="45" />
+            <enum name="title_tiny_bold_static_white" value="46" />
+            <enum name="title_tiny_bold_inverted" value="47" />
+
+            <enum name="title_tiny_demi_default" value="48" />
+            <enum name="title_tiny_demi_inactive" value="49" />
+            <enum name="title_tiny_demi_active" value="50" />
+            <enum name="title_tiny_demi_error" value="51" />
+            <enum name="title_tiny_demi_static_white" value="52" />
+            <enum name="title_tiny_demi_inverted" value="53" />
+
+            <enum name="body_moderate_default" value="54" />
+            <enum name="body_moderate_inactive" value="55" />
+            <enum name="body_moderate_active" value="56" />
+            <enum name="body_moderate_error" value="57" />
+            <enum name="body_moderate_static_white" value="58" />
+            <enum name="body_moderate_inverted" value="59" />
+
+            <enum name="body_small_default" value="60" />
+            <enum name="body_small_inactive" value="61" />
+            <enum name="body_small_active" value="62" />
+            <enum name="body_small_error" value="63" />
+            <enum name="body_small_static_white" value="64" />
+            <enum name="body_small_inverted" value="65" />
+
+            <enum name="caption_moderate_demi_default" value="66" />
+            <enum name="caption_moderate_demi_inactive" value="67" />
+            <enum name="caption_moderate_demi_active" value="68" />
+            <enum name="caption_moderate_demi_error" value="69" />
+            <enum name="caption_moderate_demi_static_white" value="70" />
+            <enum name="caption_moderate_demi_inverted" value="71" />
+
+            <enum name="caption_moderate_book_default" value="72" />
+            <enum name="caption_moderate_book_inactive" value="73" />
+            <enum name="caption_moderate_book_active" value="74" />
+            <enum name="caption_moderate_book_error" value="75" />
+            <enum name="caption_moderate_book_static_white" value="76" />
+            <enum name="caption_moderate_book_inverted" value="77" />
+
+            <enum name="caption_small_demi_default" value="78" />
+            <enum name="caption_small_demi_inactive" value="79" />
+            <enum name="caption_small_demi_active" value="80" />
+            <enum name="caption_small_demi_error" value="81" />
+            <enum name="caption_small_demi_static_white" value="82" />
+            <enum name="caption_small_demi_inverted" value="83" />
+
+            <enum name="caption_small_book_default" value="84" />
+            <enum name="caption_small_book_inactive" value="85" />
+            <enum name="caption_small_book_active" value="86" />
+            <enum name="caption_small_book_error" value="87" />
+            <enum name="caption_small_book_static_white" value="88" />
+            <enum name="caption_small_book_inverted" value="89" />
+
+        </attr>
+    </declare-styleable>
+</resources>

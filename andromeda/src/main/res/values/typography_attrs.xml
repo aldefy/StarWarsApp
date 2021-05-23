@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--============================== Typography Tokens ==============================-->
+
+    <!--============ TitleHero ============-->
+
+    <attr name="title_hero_font_name" format="reference" />
+    <attr name="title_hero_font_size" format="dimension" />
+    <attr name="title_hero_line_height" format="dimension" />
+
+    <!--TitleHero Default-->
+    <attr name="title_hero_default_color" format="color" />
+    <!--TitleHero Inactive-->
+    <attr name="title_hero_inactive_color" format="color" />
+    <!--TitleHero Active-->
+    <attr name="title_hero_active_color" format="color" />
+    <!--TitleHero Error-->
+    <attr name="title_hero_error_color" format="color" />
+    <!--TitleHero StaticWhite-->
+    <attr name="title_hero_static_white_color" format="color" />
+    <!--TitleHero Inverted-->
+    <attr name="title_hero_inverted_color" format="color"/>
+
+    <!--============ TitleExtraLarge ============-->
+
+    <attr name="title_extra_large_font_name" format="reference" />
+    <attr name="title_extra_large_font_size" format="dimension" />
+    <attr name="title_extra_large_line_height" format="dimension" />
+
+    <!--TitleExtraLarge Default-->
+    <attr name="title_extra_large_default_color" format="color" />
+    <!--TitleExtraLarge Inactive-->
+    <attr name="title_extra_large_inactive_color" format="color" />
+    <!--TitleExtraLarge Active-->
+    <attr name="title_extra_large_active_color" format="color" />
+    <!--TitleExtraLarge Error-->
+    <attr name="title_extra_large_error_color" format="color" />
+    <!--TitleExtraLarge StaticWhite-->
+    <attr name="title_extra_large_static_white_color" format="color" />
+    <!--TitleExtraLarge Inverted-->
+    <attr name="title_extra_large_inverted_color" format="color"/>
+
+    <!--============ TitleLarge ============-->
+
+    <attr name="title_large_font_name" format="reference" />
+    <attr name="title_large_font_size" format="dimension" />
+    <attr name="title_large_line_height" format="dimension" />
+
+    <!--TitleLarge Default-->
+    <attr name="title_large_default_color" format="color" />
+    <!--TitleLarge Inactive-->
+    <attr name="title_large_inactive_color" format="color" />
+    <!--TitleLarge Active-->
+    <attr name="title_large_active_color" format="color" />
+    <!--TitleLarge Error-->
+    <attr name="title_large_error_color" format="color" />
+    <!--TitleLarge StaticWhite-->
+    <attr name="title_large_static_white_color" format="color" />
+    <!--TitleLarge Inverted-->
+    <attr name="title_large_inverted_color" format="color" />
+
+    <!--============ TitleModerateBold ============-->
+
+    <attr name="title_moderate_bold_font_name" format="reference" />
+    <attr name="title_moderate_bold_font_size" format="dimension" />
+    <attr name="title_moderate_bold_line_height" format="dimension" />
+
+    <!--TitleModerateBold Default-->
+    <attr name="title_moderate_bold_default_color" format="color" />
+    <!--TitleModerateBold Inactive-->
+    <attr name="title_moderate_bold_inactive_color" format="color" />
+    <!--TitleModerateBold Active-->
+    <attr name="title_moderate_bold_active_color" format="color" />
+    <!--TitleModerateBold Error-->
+    <attr name="title_moderate_bold_error_color" format="color" />
+    <!--TitleModerateBold StaticWhite-->
+    <attr name="title_moderate_bold_static_white_color" format="color" />
+    <!--TitleModerateBold Inverted-->
+    <attr name="title_moderate_bold_inverted_color" format="color" />
+
+    <!--============ TitleModerateDemi ============-->
+
+    <attr name="title_moderate_demi_font_name" format="reference" />
+    <attr name="title_moderate_demi_font_size" format="dimension" />
+    <attr name="title_moderate_demi_line_height" format="dimension" />
+
+    <!--TitleModerateDemi Default-->
+    <attr name="title_moderate_demi_default_color" format="color" />
+    <!--TitleModerateDemi Inactive-->
+    <attr name="title_moderate_demi_inactive_color" format="color" />
+    <!--TitleModerateDemi Active-->
+    <attr name="title_moderate_demi_active_color" format="color" />
+    <!--TitleModerateDemi Error-->
+    <attr name="title_moderate_demi_error_color" format="color" />
+    <!--TitleModerateDemi StaticWhite-->
+    <attr name="title_moderate_demi_static_white_color" format="color" />
+    <!--TitleModerateDemi Inverted-->
+    <attr name="title_moderate_demi_inverted_color" format="color" />
+
+    <!--============ TitleSmallBold ============-->
+
+    <attr name="title_small_bold_font_name" format="reference" />
+    <attr name="title_small_bold_font_size" format="dimension" />
+    <attr name="title_small_bold_line_height" format="dimension" />
+
+    <!--TitleSmallBold Default-->
+    <attr name="title_small_bold_default_color" format="color" />
+    <!--TitleSmallBold Inactive-->
+    <attr name="title_small_bold_inactive_color" format="color" />
+    <!--TitleSmallBold Active-->
+    <attr name="title_small_bold_active_color" format="color" />
+    <!--TitleSmallBold Error-->
+    <attr name="title_small_bold_error_color" format="color" />
+    <!--TitleSmallBold StaticWhite-->
+    <attr name="title_small_bold_static_white_color" format="color" />
+    <!--TitleSmallBold Inverted-->
+    <attr name="title_small_bold_inverted_color" format="color" />
+
+
+    <!--============ TitleTinyBold ============-->
+
+    <attr name="title_tiny_bold_font_name" format="reference" />
+    <attr name="title_tiny_bold_font_size" format="dimension" />
+    <attr name="title_tiny_bold_line_height" format="dimension" />
+
+    <!--TitleTinyBold Default-->
+    <attr name="title_tiny_bold_default_color" format="color" />
+    <!--TitleTinyBold Inactive-->
+    <attr name="title_tiny_bold_inactive_color" format="color" />
+    <!--TitleTinyBold Active-->
+    <attr name="title_tiny_bold_active_color" format="color" />
+    <!--TitleTinyBold Error-->
+    <attr name="title_tiny_bold_error_color" format="color" />
+    <!--TitleTinyBold StaticWhite-->
+    <attr name="title_tiny_bold_static_white_color" format="color" />
+    <!--TitleTinyBold Inverted-->
+    <attr name="title_tiny_bold_inverted_color" format="color" />
+
+    <!--============ TitleTinyDemi ============-->
+
+    <attr name="title_tiny_demi_font_name" format="reference" />
+    <attr name="title_tiny_demi_font_size" format="dimension" />
+    <attr name="title_tiny_demi_line_height" format="dimension" />
+
+    <!--TitleTinyDemi Default-->
+    <attr name="title_tiny_demi_default_color" format="color" />
+    <!--TitleTinyDemi Inactive-->
+    <attr name="title_tiny_demi_inactive_color" format="color" />
+    <!--TitleTinyDemi Active-->
+    <attr name="title_tiny_demi_active_color" format="color" />
+    <!--TitleTinyDemi Error-->
+    <attr name="title_tiny_demi_error_color" format="color" />\
+    <!--TitleTinyDemi StaticWhite-->
+    <attr name="title_tiny_demi_static_white_color" format="color" />
+    <!--TitleTinyDemi Inverted-->
+    <attr name="title_tiny_demi_inverted_color" format="color" />
+
+    <!--============ BodyModerate ============-->
+    <!--BodyModerate Default-->
+    <attr name="body_moderate_font_name" format="reference" />
+    <attr name="body_moderate_font_size" format="dimension" />
+    <attr name="body_moderate_line_height" format="dimension" />
+    <attr name="body_moderate_default_color" format="color" />
+    <!--BodyModerate Inactive-->
+    <attr name="body_moderate_inactive_color" format="color" />
+    <!--BodyModerate Active-->
+    <attr name="body_moderate_active_color" format="color" />
+    <!--BodyModerate Error-->
+    <attr name="body_moderate_error_color" format="color" />
+    <!--BodyModerate StaticWhite-->
+    <attr name="body_moderate_static_white_color" format="color" />
+    <!--BodyModerate Inverted-->
+    <attr name="body_moderate_inverted_color" format="color" />
+
+    <!--============ BodySmall ============-->
+    <!--BodySmall Default-->
+    <attr name="body_small_font_name" format="reference" />
+    <attr name="body_small_font_size" format="dimension" />
+    <attr name="body_small_line_height" format="dimension" />
+    <attr name="body_small_default_color" format="color" />
+
+    <!--============ TitleSmallDemi ============-->
+
+    <attr name="title_small_demi_font_name" format="reference" />
+    <attr name="title_small_demi_font_size" format="dimension" />
+    <attr name="title_small_demi_line_height" format="dimension" />
+
+    <!--TitleSmallDemi Default-->
+    <attr name="title_small_demi_default_color" format="color" />
+    <!--TitleSmallDemi Inactive-->
+    <attr name="title_small_demi_inactive_color" format="color" />
+    <!--TitleSmallDemi Active-->
+    <attr name="title_small_demi_active_color" format="color" />
+    <!--TitleSmallDemi Error-->
+    <attr name="title_small_demi_error_color" format="color" />
+    <!--TitleSmallDemi StaticWhite-->
+    <attr name="title_small_demi_static_white_color" format="color" />
+    <!--TitleSmallDemi Inverted-->
+    <attr name="title_small_demi_inverted_color" format="color" />
+
+    <!--BodySmall Inactive-->
+    <attr name="body_small_inactive_color" format="color" />
+    <!--BodySmall Active-->
+    <attr name="body_small_active_color" format="color" />
+    <!--BodySmall Error-->
+    <attr name="body_small_error_color" format="color" />
+    <!--BodySmall StaticWhite-->
+    <attr name="body_small_static_white_color" format="color" />
+    <!--BodySmall Inverted-->
+    <attr name="body_small_inverted_color" format="color" />
+    <!--============ CaptionModerateDemi ============-->
+
+    <!--CaptionModerateDemi -->
+    <attr name="caption_moderate_demi_font_name" format="reference" />
+    <attr name="caption_moderate_demi_font_size" format="dimension" />
+    <attr name="caption_moderate_demi_line_height" format="dimension" />
+    <attr name="caption_moderate_demi_default_color" format="color" />
+
+    <!--CaptionModerateDemi Inactive-->
+    <attr name="caption_moderate_demi_inactive_color" format="color" />
+    <!--CaptionModerateDemi Active-->
+    <attr name="caption_moderate_demi_active_color" format="color" />
+    <!--CaptionModerateDemi Error-->
+    <attr name="caption_moderate_demi_error_color" format="color" />
+    <!--CaptionModerateDemi StaticWhite-->
+    <attr name="caption_moderate_demi_static_white_color" format="color" />
+    <!--CaptionModerateDemi Inverted-->
+    <attr name="caption_moderate_demi_inverted_color" format="color" />
+
+    <!--============ CaptionModerateBook ============-->
+
+    <!--CaptionModerateBook -->
+    <attr name="caption_moderate_book_font_name" format="reference" />
+    <attr name="caption_moderate_book_font_size" format="dimension" />
+    <attr name="caption_moderate_book_line_height" format="dimension" />
+    <attr name="caption_moderate_book_default_color" format="color" />
+
+    <!--CaptionModerateBook Inactive-->
+    <attr name="caption_moderate_book_inactive_color" format="color" />
+    <!--CaptionModerateBook Active-->
+    <attr name="caption_moderate_book_active_color" format="color" />
+    <!--CaptionModerateBook Error-->
+    <attr name="caption_moderate_book_error_color" format="color" />
+    <!--CaptionModerateBook StaticWhite-->
+    <attr name="caption_moderate_book_static_white_color" format="color" />
+    <!--CaptionModerateBook Inverted-->
+    <attr name="caption_moderate_book_inverted_color" format="color" />
+
+    <!--============ CaptionSmallDemi ============-->
+
+    <!--CaptionSmallDemi -->
+    <attr name="caption_small_demi_font_name" format="reference" />
+    <attr name="caption_small_demi_font_size" format="dimension" />
+    <attr name="caption_small_demi_line_height" format="dimension" />
+    <attr name="caption_small_demi_default_color" format="color" />
+
+    <!--CaptionSmallDemi Inactive-->
+    <attr name="caption_small_demi_inactive_color" format="color" />
+    <!--CaptionSmallDemi Active-->
+    <attr name="caption_small_demi_active_color" format="color" />
+    <!--CaptionSmallDemi Error-->
+    <attr name="caption_small_demi_error_color" format="color" />
+    <!--CaptionSmallDemi StaticWhite-->
+    <attr name="caption_small_demi_static_white_color" format="color" />
+    <!--CaptionSmallDemi Inverted-->
+    <attr name="caption_small_demi_inverted_color" format="color" />
+
+    <!--============ CaptionSmallBook ============-->
+
+    <!--CaptionSmallBook -->
+    <attr name="caption_small_book_font_name" format="reference" />
+    <attr name="caption_small_book_font_size" format="dimension" />
+    <attr name="caption_small_book_line_height" format="dimension" />
+    <attr name="caption_small_book_default_color" format="color" />
+
+    <!--CaptionSmallBook Inactive-->
+    <attr name="caption_small_book_inactive_color" format="color" />
+    <!--CaptionSmallBook Active-->
+    <attr name="caption_small_book_active_color" format="color" />
+    <!--CaptionSmallBook Error-->
+    <attr name="caption_small_book_error_color" format="color" />
+    <!--CaptionSmallBook StaticWhite-->
+    <attr name="caption_small_book_static_white_color" format="color" />
+    <!--CaptionSmallBook Inverted-->
+    <attr name="caption_small_book_inverted_color" format="color" />
+
+</resources>
