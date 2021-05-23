@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="AndromedaListView">
+        <attr name="list_type" format="enum">
+            <enum name="linear" value="0" />
+            <enum name="grid" value="1" />
+        </attr>
+        <attr name="grid_span" format="integer" />
+    </declare-styleable>
+</resources>
