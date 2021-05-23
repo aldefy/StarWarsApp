@@ -1,6 +1,5 @@
 package com.star.wars.andromeda.views.list.internal.component.text.data
 
-import com.spacemonk.andromeda.component.*
 import com.star.wars.andromeda.Color
 import com.star.wars.andromeda.views.list.ComponentDataWithClick
 import com.star.wars.andromeda.views.list.Gravity

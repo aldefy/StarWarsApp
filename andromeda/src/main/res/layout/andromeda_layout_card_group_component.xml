@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardViewRoot"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cardElevation="0dp"
+    app:contentPadding="16dp"
+    tools:layout_height="200dp"
+    tools:layout_width="200dp">
+
+    <LinearLayout
+        android:id="@+id/epoxy_model_group_child_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:layout_height="match_parent"
+        tools:layout_width="match_parent" />
+
+</androidx.cardview.widget.CardView>
