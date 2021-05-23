@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--========== BodyModerate ==========-->
+    <style name="BodyModerateDefault">
+        <item name="android:fontFamily">?attr/body_moderate_font_name</item>
+        <item name="android:textSize">?attr/body_moderate_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/body_moderate_line_height</item>
+        <item name="android:textColor">?attr/body_moderate_default_color</item>
+        <item name="android:textColorHint">?attr/body_moderate_inactive_color</item>
+    </style>
+    <style name="BodyModerateInactive">
+        <item name="android:fontFamily">?attr/body_moderate_font_name</item>
+        <item name="android:textSize">?attr/body_moderate_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/body_moderate_line_height</item>
+        <item name="android:textColor">?attr/body_moderate_inactive_color</item>
+        <item name="android:textColorHint">?attr/body_moderate_inactive_color</item>
+    </style>
+    <style name="BodyModerateActive">
+        <item name="android:fontFamily">?attr/body_moderate_font_name</item>
+        <item name="android:textSize">?attr/body_moderate_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/body_moderate_line_height</item>
+        <item name="android:textColor">?attr/body_moderate_active_color</item>
+        <item name="android:textColorHint">?attr/body_moderate_inactive_color</item>
+    </style>
+    <style name="BodyModerateError">
+        <item name="android:fontFamily">?attr/body_moderate_font_name</item>
+        <item name="android:textSize">?attr/body_moderate_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/body_moderate_line_height</item>
+        <item name="android:textColor">?attr/body_moderate_error_color</item>
+        <item name="android:textColorHint">?attr/body_moderate_inactive_color</item>
+    </style>
+    <style name="BodyModerateStaticWhite">
+        <item name="android:fontFamily">?attr/body_moderate_font_name</item>
+        <item name="android:textSize">?attr/body_moderate_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/body_moderate_line_height</item>
+        <item name="android:textColor">?attr/body_moderate_static_white_color</item>
+        <item name="android:textColorHint">?attr/body_moderate_inactive_color</item>
+    </style>
+    <style name="BodyModerateInverted">
+        <item name="android:fontFamily">?attr/body_moderate_font_name</item>
+        <item name="android:textSize">?attr/body_moderate_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/body_moderate_line_height</item>
+        <item name="android:textColor">?attr/body_moderate_inverted_color</item>
+        <item name="android:textColorHint">?attr/body_moderate_inactive_color</item>
+    </style>
+    <!--========== BodySmall ==========-->
+    <style name="BodySmallDefault">
+        <item name="android:fontFamily">?attr/body_small_font_name</item>
+        <item name="android:textSize">?attr/body_small_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/body_small_line_height</item>
+        <item name="android:textColor">?attr/body_small_default_color</item>
+        <item name="android:textColorHint">?attr/body_small_inactive_color</item>
+    </style>
+    <style name="BodySmallInactive">
+        <item name="android:fontFamily">?attr/body_small_font_name</item>
+        <item name="android:textSize">?attr/body_small_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/body_small_line_height</item>
+        <item name="android:textColor">?attr/body_small_inactive_color</item>
+        <item name="android:textColorHint">?attr/body_small_inactive_color</item>
+    </style>
+    <style name="BodySmallActive">
+        <item name="android:fontFamily">?attr/body_small_font_name</item>
+        <item name="android:textSize">?attr/body_small_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/body_small_line_height</item>
+        <item name="android:textColor">?attr/body_small_active_color</item>
+        <item name="android:textColorHint">?attr/body_small_inactive_color</item>
+    </style>
+    <style name="BodySmallError">
+        <item name="android:fontFamily">?attr/body_small_font_name</item>
+        <item name="android:textSize">?attr/body_small_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/body_small_line_height</item>
+        <item name="android:textColor">?attr/body_small_error_color</item>
+        <item name="android:textColorHint">?attr/body_small_inactive_color</item>
+    </style>
+    <style name="BodySmallStaticWhite">
+        <item name="android:fontFamily">?attr/body_small_font_name</item>
+        <item name="android:textSize">?attr/body_small_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/body_small_line_height</item>
+        <item name="android:textColor">?attr/body_small_static_white_color</item>
+        <item name="android:textColorHint">?attr/body_small_inactive_color</item>
+    </style>
+    <style name="BodySmallInverted">
+        <item name="android:fontFamily">?attr/body_small_font_name</item>
+        <item name="android:textSize">?attr/body_small_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/body_small_line_height</item>
+        <item name="android:textColor">?attr/body_small_inverted_color</item>
+        <item name="android:textColorHint">?attr/body_small_inactive_color</item>
+    </style>
+</resources>

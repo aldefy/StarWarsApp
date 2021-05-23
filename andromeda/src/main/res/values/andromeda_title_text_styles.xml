@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--========== TitleHero ==========-->
+    <style name="TitleHeroDefault">
+        <item name="android:fontFamily">?attr/title_hero_font_name</item>
+        <item name="android:textSize">?attr/title_hero_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/title_hero_line_height</item>
+        <item name="android:textColor">?attr/title_hero_default_color</item>
+        <item name="android:textColorHint">?attr/title_hero_inactive_color</item>
+    </style>
+
+    <style name="TitleHeroInactive">
+        <item name="android:fontFamily">?attr/title_hero_font_name</item>
+        <item name="android:textSize">?attr/title_hero_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/title_hero_line_height</item>
+        <item name="android:textColor">?attr/title_hero_inactive_color</item>
+        <item name="android:textColorHint">?attr/title_hero_inactive_color</item>
+    </style>
+
+    <style name="TitleHeroActive">
+        <item name="android:fontFamily">?attr/title_hero_font_name</item>
+        <item name="android:textSize">?attr/title_hero_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/title_hero_line_height</item>
+        <item name="android:textColor">?attr/title_hero_active_color</item>
+        <item name="android:textColorHint">?attr/title_hero_inactive_color</item>
+    </style>
+
+    <style name="TitleHeroError">
+        <item name="android:fontFamily">?attr/title_hero_font_name</item>
+        <item name="android:textSize">?attr/title_hero_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/title_hero_line_height</item>
+        <item name="android:textColor">?attr/title_hero_error_color</item>
+        <item name="android:textColorHint">?attr/title_hero_inactive_color</item>
+    </style>
+
+    <style name="TitleHeroStaticWhite">
+        <item name="android:fontFamily">?attr/title_hero_font_name</item>
+        <item name="android:textSize">?attr/title_hero_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/title_hero_line_height</item>
+        <item name="android:textColor">?attr/title_hero_static_white_color</item>
+        <item name="android:textColorHint">?attr/title_hero_inactive_color</item>
+    </style>
+
+    <style name="TitleHeroInverted">
+        <item name="android:fontFamily">?attr/title_hero_font_name</item>
+        <item name="android:textSize">?attr/title_hero_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/title_hero_line_height</item>
+        <item name="android:textColor">?attr/title_hero_inverted_color</item>
+        <item name="android:textColorHint">?attr/title_hero_inactive_color</item>
+    </style>
+
+    <!--========== TitleExtraLarge ==========-->
+    <style name="TitleExtraLargeDefault">
+        <item name="android:fontFamily">?attr/title_extra_large_font_name</item>
+        <item name="android:textSize">?attr/title_extra_large_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/title_extra_large_line_height</item>
+        <item name="android:textColor">?attr/title_extra_large_default_color</item>
+        <item name="android:textColorHint">?attr/title_extra_large_inactive_color</item>
+    </style>
+
+    <style name="TitleExtraLargeInactive">
+        <item name="android:fontFamily">?attr/title_extra_large_font_name</item>
+        <item name="android:textSize">?attr/title_extra_large_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/title_extra_large_line_height</item>
+        <item name="android:textColor">?attr/title_extra_large_inactive_color</item>
+        <item name="android:textColorHint">?attr/title_extra_large_inactive_color</item>
+    </style>
+
+    <style name="TitleExtraLargeActive">
+        <item name="android:fontFamily">?attr/title_extra_large_font_name</item>
+        <item name="android:textSize">?attr/title_extra_large_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/title_extra_large_line_height</item>
+        <item name="android:textColor">?attr/title_extra_large_active_color</item>
+        <item name="android:textColorHint">?attr/title_extra_large_inactive_color</item>
+    </style>
+
+    <style name="TitleExtraLargeError">
+        <item name="android:fontFamily">?attr/title_extra_large_font_name</item>
+        <item name="android:textSize">?attr/title_extra_large_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/title_extra_large_line_height</item>
+        <item name="android:textColor">?attr/title_extra_large_error_color</item>
+        <item name="android:textColorHint">?attr/title_extra_large_inactive_color</item>
+    </style>
+
+    <style name="TitleExtraLargeStaticWhite">
+        <item name="android:fontFamily">?attr/title_extra_large_font_name</item>
+        <item name="android:textSize">?attr/title_extra_large_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/title_extra_large_line_height</item>
+        <item name="android:textColor">?attr/title_extra_large_static_white_color</item>
+        <item name="android:textColorHint">?attr/title_extra_large_inactive_color</item>
+    </style>
+
+    <style name="TitleExtraLargeInverted">
+        <item name="android:fontFamily">?attr/title_extra_large_font_name</item>
+        <item name="android:textSize">?attr/title_extra_large_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/title_extra_large_line_height</item>
+        <item name="android:textColor">?attr/title_extra_large_inverted_color</item>
+        <item name="android:textColorHint">?attr/title_extra_large_inactive_color</item>
+    </style>
+
+    <!--========== TitleLarge ==========-->
+    <style name="TitleLargeDefault">
+        <item name="android:fontFamily">?attr/title_large_font_name</item>
+        <item name="android:textSize">?attr/title_large_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/title_large_line_height</item>
+        <item name="android:textColor">?attr/title_large_default_color</item>
+        <item name="android:textColorHint">?attr/title_large_inactive_color</item>
+    </style>
+
+    <style name="TitleLargeInactive">
+        <item name="android:fontFamily">?attr/title_large_font_name</item>
+        <item name="android:textSize">?attr/title_large_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/title_large_line_height</item>
+        <item name="android:textColor">?attr/title_large_inactive_color</item>
+        <item name="android:textColorHint">?attr/title_large_inactive_color</item>
+    </style>
+
+    <style name="TitleLargeActive">
+        <item name="android:fontFamily">?attr/title_large_font_name</item>
+        <item name="android:textSize">?attr/title_large_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/title_large_line_height</item>
+        <item name="android:textColor">?attr/title_large_active_color</item>
+        <item name="android:textColorHint">?attr/title_large_inactive_color</item>
+    </style>
+
+    <style name="TitleLargeError">
+        <item name="android:fontFamily">?attr/title_large_font_name</item>
+        <item name="android:textSize">?attr/title_large_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/title_large_line_height</item>
+        <item name="android:textColor">?attr/title_large_error_color</item>
+        <item name="android:textColorHint">?attr/title_large_inactive_color</item>
+    </style>
+
+    <style name="TitleLargeStaticWhite">
+        <item name="android:fontFamily">?attr/title_large_font_name</item>
+        <item name="android:textSize">?attr/title_large_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/title_large_line_height</item>
+        <item name="android:textColor">?attr/title_large_static_white_color</item>
+        <item name="android:textColorHint">?attr/title_large_inactive_color</item>
+    </style>
+
+    <style name="TitleLargeInverted">
+        <item name="android:fontFamily">?attr/title_large_font_name</item>
+        <item name="android:textSize">?attr/title_large_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/title_large_line_height</item>
+        <item name="android:textColor">?attr/title_large_inverted_color</item>
+        <item name="android:textColorHint">?attr/title_large_inactive_color</item>
+    </style>
+
+    <!--========== TitleModerateBold ==========-->
+    <style name="TitleModerateBoldDefault">
+        <item name="android:fontFamily">?attr/title_moderate_bold_font_name</item>
+        <item name="android:textSize">?attr/title_moderate_bold_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/title_moderate_bold_line_height</item>
+        <item name="android:textColor">?attr/title_moderate_bold_default_color</item>
+        <item name="android:textColorHint">?attr/title_moderate_bold_inactive_color</item>
+    </style>
+
+    <style name="TitleModerateBoldInactive">
+        <item name="android:fontFamily">?attr/title_moderate_bold_font_name</item>
+        <item name="android:textSize">?attr/title_moderate_bold_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/title_moderate_bold_line_height</item>
+        <item name="android:textColor">?attr/title_moderate_bold_inactive_color</item>
+        <item name="android:textColorHint">?attr/title_moderate_bold_inactive_color</item>
+    </style>
+
+    <style name="TitleModerateBoldActive">
+        <item name="android:fontFamily">?attr/title_moderate_bold_font_name</item>
+        <item name="android:textSize">?attr/title_moderate_bold_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/title_moderate_bold_line_height</item>
+        <item name="android:textColor">?attr/title_moderate_bold_active_color</item>
+        <item name="android:textColorHint">?attr/title_moderate_bold_inactive_color</item>
+    </style>
+
+    <style name="TitleModerateBoldError">
+        <item name="android:fontFamily">?attr/title_moderate_bold_font_name</item>
+        <item name="android:textSize">?attr/title_moderate_bold_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/title_moderate_bold_line_height</item>
+        <item name="android:textColor">?attr/title_moderate_bold_error_color</item>
+        <item name="android:textColorHint">?attr/title_moderate_bold_inactive_color</item>
+    </style>
+
+    <style name="TitleModerateBoldStaticWhite">
+        <item name="android:fontFamily">?attr/title_moderate_bold_font_name</item>
+        <item name="android:textSize">?attr/title_moderate_bold_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/title_moderate_bold_line_height</item>
+        <item name="android:textColor">?attr/title_moderate_bold_static_white_color</item>
+        <item name="android:textColorHint">?attr/title_moderate_bold_inactive_color</item>
+    </style>
+
+    <style name="TitleModerateBoldInverted">
+        <item name="android:fontFamily">?attr/title_moderate_bold_font_name</item>
+        <item name="android:textSize">?attr/title_moderate_bold_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/title_moderate_bold_line_height</item>
+        <item name="android:textColor">?attr/title_moderate_bold_inverted_color</item>
+        <item name="android:textColorHint">?attr/title_moderate_bold_inactive_color</item>
+    </style>
+
+    <!--========== TitleModerateDemi ==========-->
+    <style name="TitleModerateDemiDefault">
+        <item name="android:fontFamily">?attr/title_moderate_demi_font_name</item>
+        <item name="android:textSize">?attr/title_moderate_demi_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/title_moderate_demi_line_height</item>
+        <item name="android:textColor">?attr/title_moderate_demi_default_color</item>
+        <item name="android:textColorHint">?attr/title_moderate_demi_inactive_color</item>
+    </style>
+
+
+    <style name="TitleModerateDemiInactive">
+        <item name="android:fontFamily">?attr/title_moderate_demi_font_name</item>
+        <item name="android:textSize">?attr/title_moderate_demi_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/title_moderate_demi_line_height</item>
+        <item name="android:textColor">?attr/title_moderate_demi_inactive_color</item>
+        <item name="android:textColorHint">?attr/title_moderate_demi_inactive_color</item>
+    </style>
+
+    <style name="TitleModerateDemiActive">
+        <item name="android:fontFamily">?attr/title_moderate_demi_font_name</item>
+        <item name="android:textSize">?attr/title_moderate_demi_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/title_moderate_demi_line_height</item>
+        <item name="android:textColor">?attr/title_moderate_demi_active_color</item>
+        <item name="android:textColorHint">?attr/title_moderate_demi_inactive_color</item>
+    </style>
+
+    <style name="TitleModerateDemiError">
+        <item name="android:fontFamily">?attr/title_moderate_demi_font_name</item>
+        <item name="android:textSize">?attr/title_moderate_demi_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/title_moderate_demi_line_height</item>
+        <item name="android:textColor">?attr/title_moderate_demi_error_color</item>
+        <item name="android:textColorHint">?attr/title_moderate_demi_inactive_color</item>
+    </style>
+
+    <style name="TitleModerateDemiStaticWhite">
+        <item name="android:fontFamily">?attr/title_moderate_demi_font_name</item>
+        <item name="android:textSize">?attr/title_moderate_demi_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/title_moderate_demi_line_height</item>
+        <item name="android:textColor">?attr/title_moderate_demi_static_white_color</item>
+        <item name="android:textColorHint">?attr/title_moderate_demi_inactive_color</item>
+    </style>
+
+    <style name="TitleModerateDemiInverted">
+        <item name="android:fontFamily">?attr/title_moderate_demi_font_name</item>
+        <item name="android:textSize">?attr/title_moderate_demi_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/title_moderate_demi_line_height</item>
+        <item name="android:textColor">?attr/title_moderate_demi_inverted_color</item>
+        <item name="android:textColorHint">?attr/title_moderate_demi_inactive_color</item>
+    </style>
+
+    <!--========== TitleSmallBold ==========-->
+    <style name="TitleSmallBoldDefault">
+        <item name="android:fontFamily">?attr/title_small_bold_font_name</item>
+        <item name="android:textSize">?attr/title_small_bold_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/title_small_bold_line_height</item>
+        <item name="android:textColor">?attr/title_small_bold_default_color</item>
+        <item name="android:textColorHint">?attr/title_small_bold_inactive_color</item>
+    </style>
+
+    <style name="TitleSmallBoldInactive">
+        <item name="android:fontFamily">?attr/title_small_bold_font_name</item>
+        <item name="android:textSize">?attr/title_small_bold_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/title_small_bold_line_height</item>
+        <item name="android:textColor">?attr/title_small_bold_inactive_color</item>
+        <item name="android:textColorHint">?attr/title_small_bold_inactive_color</item>
+    </style>
+
+    <style name="TitleSmallBoldActive">
+        <item name="android:fontFamily">?attr/title_small_bold_font_name</item>
+        <item name="android:textSize">?attr/title_small_bold_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/title_small_bold_line_height</item>
+        <item name="android:textColor">?attr/title_small_bold_active_color</item>
+        <item name="android:textColorHint">?attr/title_small_bold_inactive_color</item>
+    </style>
+
+    <style name="TitleSmallBoldError">
+        <item name="android:fontFamily">?attr/title_small_bold_font_name</item>
+        <item name="android:textSize">?attr/title_small_bold_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/title_small_bold_line_height</item>
+        <item name="android:textColor">?attr/title_small_bold_error_color</item>
+        <item name="android:textColorHint">?attr/title_small_bold_inactive_color</item>
+    </style>
+
+    <style name="TitleSmallBoldStaticWhite">
+        <item name="android:fontFamily">?attr/title_small_bold_font_name</item>
+        <item name="android:textSize">?attr/title_small_bold_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/title_small_bold_line_height</item>
+        <item name="android:textColor">?attr/title_small_bold_static_white_color</item>
+        <item name="android:textColorHint">?attr/title_small_bold_inactive_color</item>
+    </style>
+
+    <style name="TitleSmallBoldInverted">
+        <item name="android:fontFamily">?attr/title_small_bold_font_name</item>
+        <item name="android:textSize">?attr/title_small_bold_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/title_small_bold_line_height</item>
+        <item name="android:textColor">?attr/title_small_bold_inverted_color</item>
+        <item name="android:textColorHint">?attr/title_small_bold_inactive_color</item>
+    </style>
+
+    <!--========== TitleSmallDemi ==========-->
+    <style name="TitleSmallDemiDefault">
+        <item name="android:fontFamily">?attr/title_small_demi_font_name</item>
+        <item name="android:textSize">?attr/title_small_demi_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/title_small_demi_line_height</item>
+        <item name="android:textColor">?attr/title_small_demi_default_color</item>
+        <item name="android:textColorHint">?attr/title_small_demi_inactive_color</item>
+    </style>
+
+    <style name="TitleSmallDemiInactive">
+        <item name="android:fontFamily">?attr/title_small_demi_font_name</item>
+        <item name="android:textSize">?attr/title_small_demi_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/title_small_demi_line_height</item>
+        <item name="android:textColor">?attr/title_small_demi_inactive_color</item>
+        <item name="android:textColorHint">?attr/title_small_demi_inactive_color</item>
+    </style>
+
+    <style name="TitleSmallDemiActive">
+        <item name="android:fontFamily">?attr/title_small_demi_font_name</item>
+        <item name="android:textSize">?attr/title_small_demi_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/title_small_demi_line_height</item>
+        <item name="android:textColor">?attr/title_small_demi_active_color</item>
+        <item name="android:textColorHint">?attr/title_small_demi_inactive_color</item>
+    </style>
+
+    <style name="TitleSmallDemiError">
+        <item name="android:fontFamily">?attr/title_small_demi_font_name</item>
+        <item name="android:textSize">?attr/title_small_demi_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/title_small_demi_line_height</item>
+        <item name="android:textColor">?attr/title_small_demi_error_color</item>
+        <item name="android:textColorHint">?attr/title_small_demi_inactive_color</item>
+    </style>
+
+    <style name="TitleSmallDemiStaticWhite">
+        <item name="android:fontFamily">?attr/title_small_demi_font_name</item>
+        <item name="android:textSize">?attr/title_small_demi_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/title_small_demi_line_height</item>
+        <item name="android:textColor">?attr/title_small_demi_static_white_color</item>
+        <item name="android:textColorHint">?attr/title_small_demi_inactive_color</item>
+    </style>
+
+    <style name="TitleSmallDemiInverted">
+        <item name="android:fontFamily">?attr/title_small_demi_font_name</item>
+        <item name="android:textSize">?attr/title_small_demi_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/title_small_demi_line_height</item>
+        <item name="android:textColor">?attr/title_small_demi_inverted_color</item>
+        <item name="android:textColorHint">?attr/title_small_demi_inactive_color</item>
+    </style>
+
+
+    <!--========== TitleTinyBold ==========-->
+    <style name="TitleTinyBoldDefault">
+        <item name="android:fontFamily">?attr/title_tiny_bold_font_name</item>
+        <item name="android:textSize">?attr/title_tiny_bold_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/title_tiny_bold_line_height</item>
+        <item name="android:textColor">?attr/title_tiny_bold_default_color</item>
+        <item name="android:textColorHint">?attr/title_tiny_bold_inactive_color</item>
+    </style>
+
+    <style name="TitleTinyBoldInactive">
+        <item name="android:fontFamily">?attr/title_tiny_bold_font_name</item>
+        <item name="android:textSize">?attr/title_tiny_bold_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/title_tiny_bold_line_height</item>
+        <item name="android:textColor">?attr/title_tiny_bold_inactive_color</item>
+        <item name="android:textColorHint">?attr/title_tiny_bold_inactive_color</item>
+    </style>
+
+    <style name="TitleTinyBoldActive">
+        <item name="android:fontFamily">?attr/title_tiny_bold_font_name</item>
+        <item name="android:textSize">?attr/title_tiny_bold_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/title_tiny_bold_line_height</item>
+        <item name="android:textColor">?attr/title_tiny_bold_active_color</item>
+        <item name="android:textColorHint">?attr/title_tiny_bold_inactive_color</item>
+    </style>
+
+    <style name="TitleTinyBoldError">
+        <item name="android:fontFamily">?attr/title_tiny_bold_font_name</item>
+        <item name="android:textSize">?attr/title_tiny_bold_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/title_tiny_bold_line_height</item>
+        <item name="android:textColor">?attr/title_tiny_bold_error_color</item>
+        <item name="android:textColorHint">?attr/title_tiny_bold_inactive_color</item>
+    </style>
+
+    <style name="TitleTinyBoldStaticWhite">
+        <item name="android:fontFamily">?attr/title_tiny_bold_font_name</item>
+        <item name="android:textSize">?attr/title_tiny_bold_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/title_tiny_bold_line_height</item>
+        <item name="android:textColor">?attr/title_tiny_bold_static_white_color</item>
+        <item name="android:textColorHint">?attr/title_tiny_bold_inactive_color</item>
+    </style>
+
+    <style name="TitleTinyBoldInverted">
+        <item name="android:fontFamily">?attr/title_tiny_bold_font_name</item>
+        <item name="android:textSize">?attr/title_tiny_bold_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/title_tiny_bold_line_height</item>
+        <item name="android:textColor">?attr/title_tiny_bold_inverted_color</item>
+        <item name="android:textColorHint">?attr/title_tiny_bold_inactive_color</item>
+    </style>
+
+    <!--========== TitleTinyDemi ==========-->
+    <style name="TitleTinyDemiDefault">
+        <item name="android:fontFamily">?attr/title_tiny_demi_font_name</item>
+        <item name="android:textSize">?attr/title_tiny_demi_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/title_tiny_demi_line_height</item>
+        <item name="android:textColor">?attr/title_tiny_demi_default_color</item>
+        <item name="android:textColorHint">?attr/title_tiny_demi_inactive_color</item>
+    </style>
+
+    <style name="TitleTinyDemiInactive">
+        <item name="android:fontFamily">?attr/title_tiny_demi_font_name</item>
+        <item name="android:textSize">?attr/title_tiny_demi_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/title_tiny_demi_line_height</item>
+        <item name="android:textColor">?attr/title_tiny_demi_inactive_color</item>
+        <item name="android:textColorHint">?attr/title_tiny_demi_inactive_color</item>
+    </style>
+
+    <style name="TitleTinyDemiActive">
+        <item name="android:fontFamily">?attr/title_tiny_demi_font_name</item>
+        <item name="android:textSize">?attr/title_tiny_demi_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/title_tiny_demi_line_height</item>
+        <item name="android:textColor">?attr/title_tiny_demi_active_color</item>
+        <item name="android:textColorHint">?attr/title_tiny_demi_inactive_color</item>
+    </style>
+
+    <style name="TitleTinyDemiError">
+        <item name="android:fontFamily">?attr/title_tiny_demi_font_name</item>
+        <item name="android:textSize">?attr/title_tiny_demi_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/title_tiny_demi_line_height</item>
+        <item name="android:textColor">?attr/title_tiny_demi_error_color</item>
+        <item name="android:textColorHint">?attr/title_tiny_demi_inactive_color</item>
+    </style>
+
+    <style name="TitleTinyDemiStaticWhite">
+        <item name="android:fontFamily">?attr/title_tiny_demi_font_name</item>
+        <item name="android:textSize">?attr/title_tiny_demi_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/title_tiny_demi_line_height</item>
+        <item name="android:textColor">?attr/title_tiny_demi_static_white_color</item>
+        <item name="android:textColorHint">?attr/title_tiny_demi_inactive_color</item>
+    </style>
+
+    <style name="TitleTinyDemiInverted">
+        <item name="android:fontFamily">?attr/title_tiny_demi_font_name</item>
+        <item name="android:textSize">?attr/title_tiny_demi_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/title_tiny_demi_line_height</item>
+        <item name="android:textColor">?attr/title_tiny_demi_inverted_color</item>
+        <item name="android:textColorHint">?attr/title_tiny_demi_inactive_color</item>
+    </style>
+</resources>

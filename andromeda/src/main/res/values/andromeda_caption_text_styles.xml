@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--========== CaptionModerateDemi ==========-->
+    <style name="CaptionModerateDemiDefault">
+        <item name="android:fontFamily">?attr/caption_moderate_demi_font_name</item>
+        <item name="android:textSize">?attr/caption_moderate_demi_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/caption_moderate_demi_line_height</item>
+        <item name="android:textColor">?attr/caption_moderate_demi_default_color</item>
+    </style>
+    <style name="CaptionModerateDemiInactive">
+        <item name="android:fontFamily">?attr/caption_moderate_demi_font_name</item>
+        <item name="android:textSize">?attr/caption_moderate_demi_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/caption_moderate_demi_line_height</item>
+        <item name="android:textColor">?attr/caption_moderate_demi_inactive_color</item>
+    </style>
+    <style name="CaptionModerateDemiActive">
+        <item name="android:fontFamily">?attr/caption_moderate_demi_font_name</item>
+        <item name="android:textSize">?attr/caption_moderate_demi_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/caption_moderate_demi_line_height</item>
+        <item name="android:textColor">?attr/caption_moderate_demi_active_color</item>
+    </style>
+    <style name="CaptionModerateDemiError">
+        <item name="android:fontFamily">?attr/caption_moderate_demi_font_name</item>
+        <item name="android:textSize">?attr/caption_moderate_demi_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/caption_moderate_demi_line_height</item>
+        <item name="android:textColor">?attr/caption_moderate_demi_error_color</item>
+    </style>
+    <style name="CaptionModerateDemiStaticWhite">
+        <item name="android:fontFamily">?attr/caption_moderate_demi_font_name</item>
+        <item name="android:textSize">?attr/caption_moderate_demi_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/caption_moderate_demi_line_height</item>
+        <item name="android:textColor">?attr/caption_moderate_demi_static_white_color</item>
+    </style>
+    <style name="CaptionModerateDemiInverted">
+        <item name="android:fontFamily">?attr/caption_moderate_demi_font_name</item>
+        <item name="android:textSize">?attr/caption_moderate_demi_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/caption_moderate_demi_line_height</item>
+        <item name="android:textColor">?attr/caption_moderate_demi_inverted_color</item>
+    </style>
+    <!--========== CaptionModerateBook ==========-->
+    <style name="CaptionModerateBookDefault">
+        <item name="android:fontFamily">?attr/caption_moderate_book_font_name</item>
+        <item name="android:textSize">?attr/caption_moderate_book_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/caption_moderate_book_line_height</item>
+        <item name="android:textColor">?attr/caption_moderate_book_default_color</item>
+    </style>
+    <style name="CaptionModerateBookInactive">
+        <item name="android:fontFamily">?attr/caption_moderate_book_font_name</item>
+        <item name="android:textSize">?attr/caption_moderate_book_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/caption_moderate_book_line_height</item>
+        <item name="android:textColor">?attr/caption_moderate_book_inactive_color</item>
+    </style>
+    <style name="CaptionModerateBookActive">
+        <item name="android:fontFamily">?attr/caption_moderate_book_font_name</item>
+        <item name="android:textSize">?attr/caption_moderate_book_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/caption_moderate_book_line_height</item>
+        <item name="android:textColor">?attr/caption_moderate_book_active_color</item>
+    </style>
+    <style name="CaptionModerateBookError">
+        <item name="android:fontFamily">?attr/caption_moderate_book_font_name</item>
+        <item name="android:textSize">?attr/caption_moderate_book_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/caption_moderate_book_line_height</item>
+        <item name="android:textColor">?attr/caption_moderate_book_error_color</item>
+    </style>
+    <style name="CaptionModerateBookStaticWhite">
+        <item name="android:fontFamily">?attr/caption_moderate_book_font_name</item>
+        <item name="android:textSize">?attr/caption_moderate_book_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/caption_moderate_book_line_height</item>
+        <item name="android:textColor">?attr/caption_moderate_book_static_white_color</item>
+    </style>
+    <style name="CaptionModerateBookInverted">
+        <item name="android:fontFamily">?attr/caption_moderate_book_font_name</item>
+        <item name="android:textSize">?attr/caption_moderate_book_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/caption_moderate_book_line_height</item>
+        <item name="android:textColor">?attr/caption_moderate_book_inverted_color</item>
+    </style>
+    <!--========== CaptionSmallDemi ==========-->
+    <style name="CaptionSmallDemiDefault">
+        <item name="android:fontFamily">?attr/caption_small_demi_font_name</item>
+        <item name="android:textSize">?attr/caption_small_demi_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/caption_small_demi_line_height</item>
+        <item name="android:textColor">?attr/caption_small_demi_default_color</item>
+    </style>
+    <style name="CaptionSmallDemiInactive">
+        <item name="android:fontFamily">?attr/caption_small_demi_font_name</item>
+        <item name="android:textSize">?attr/caption_small_demi_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/caption_small_demi_line_height</item>
+        <item name="android:textColor">?attr/caption_small_demi_inactive_color</item>
+    </style>
+    <style name="CaptionSmallDemiActive">
+        <item name="android:fontFamily">?attr/caption_small_demi_font_name</item>
+        <item name="android:textSize">?attr/caption_small_demi_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/caption_small_demi_line_height</item>
+        <item name="android:textColor">?attr/caption_small_demi_active_color</item>
+    </style>
+    <style name="CaptionSmallDemiError">
+        <item name="android:fontFamily">?attr/caption_small_demi_font_name</item>
+        <item name="android:textSize">?attr/caption_small_demi_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/caption_small_demi_line_height</item>
+        <item name="android:textColor">?attr/caption_small_demi_error_color</item>
+    </style>
+    <style name="CaptionSmallDemiStaticWhite">
+        <item name="android:fontFamily">?attr/caption_small_demi_font_name</item>
+        <item name="android:textSize">?attr/caption_small_demi_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/caption_small_demi_line_height</item>
+        <item name="android:textColor">?attr/caption_small_demi_static_white_color</item>
+    </style>
+    <style name="CaptionSmallDemiInverted">
+        <item name="android:fontFamily">?attr/caption_small_demi_font_name</item>
+        <item name="android:textSize">?attr/caption_small_demi_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/caption_small_demi_line_height</item>
+        <item name="android:textColor">?attr/caption_small_demi_inverted_color</item>
+    </style>
+    <!--========== CaptionSmallBook ==========-->
+    <style name="CaptionSmallBookDefault">
+        <item name="android:fontFamily">?attr/caption_small_book_font_name</item>
+        <item name="android:textSize">?attr/caption_small_book_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/caption_small_book_line_height</item>
+        <item name="android:textColor">?attr/caption_small_book_default_color</item>
+    </style>
+    <style name="CaptionSmallBookInactive">
+        <item name="android:fontFamily">?attr/caption_small_book_font_name</item>
+        <item name="android:textSize">?attr/caption_small_book_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/caption_small_book_line_height</item>
+        <item name="android:textColor">?attr/caption_small_book_inactive_color</item>
+    </style>
+    <style name="CaptionSmallBookActive">
+        <item name="android:fontFamily">?attr/caption_small_book_font_name</item>
+        <item name="android:textSize">?attr/caption_small_book_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/caption_small_book_line_height</item>
+        <item name="android:textColor">?attr/caption_small_book_active_color</item>
+    </style>
+    <style name="CaptionSmallBookError">
+        <item name="android:fontFamily">?attr/caption_small_book_font_name</item>
+        <item name="android:textSize">?attr/caption_small_book_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/caption_small_book_line_height</item>
+        <item name="android:textColor">?attr/caption_small_book_error_color</item>
+    </style>
+    <style name="CaptionSmallBookStaticWhite">
+        <item name="android:fontFamily">?attr/caption_small_book_font_name</item>
+        <item name="android:textSize">?attr/caption_small_book_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/caption_small_book_line_height</item>
+        <item name="android:textColor">?attr/caption_small_book_static_white_color</item>
+    </style>
+    <style name="CaptionSmallBookInverted">
+        <item name="android:fontFamily">?attr/caption_small_book_font_name</item>
+        <item name="android:textSize">?attr/caption_small_book_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/caption_small_book_line_height</item>
+        <item name="android:textColor">?attr/caption_small_book_inverted_color</item>
+    </style>
+</resources>
