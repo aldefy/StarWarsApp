@@ -167,6 +167,16 @@
         <item name="caption_small_book_error_color" category="typography.caption_small_book">#FFEA001F</item>
         <item name="caption_small_book_static_white_color" category="typography.caption_small_book">#FFFFFFFF</item>
         <item name="caption_small_book_inverted_color" category="typography.caption_small_book">#FFFFFFFF</item>
+
+        <item name="shadow_high_x" category="shadow.shadow_high">0dp</item>
+        <item name="shadow_high_y" category="shadow.shadow_high">0dp</item>
+        <item name="shadow_high_blur" category="shadow.shadow_high">10dp</item>
+        <item name="shadow_high_color" category="shadow.shadow_high">#26000000</item>
+        <item name="shadow_low_x" category="shadow.shadow_low">0dp</item>
+        <item name="shadow_low_y" category="shadow.shadow_low">0dp</item>
+        <item name="shadow_low_blur" category="shadow.shadow_low">4dp</item>
+        <item name="shadow_low_color" category="shadow.shadow_low">#26000000</item>
+
         <item name="icon_static_black" category="color">#FF1C1D1D</item>
         <item name="icon_static_white" category="color">#FFFFFFFF</item>
         <item name="icon_static_inactive" category="color">#FF606161</item>
