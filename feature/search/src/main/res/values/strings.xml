@@ -3,5 +3,4 @@
     <string name="search_character" tools:ignore="ExtraTranslation">Search character</string>
     <string name="navbar_search_title">Star Wars</string>
     <string name="navbar_search_subtitle">Universe</string>
-    <string name="change_theme">Change theme</string>
 </resources>

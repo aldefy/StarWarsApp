@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/navBarLayout"
+        layout="@layout/layout_navbar" />
+
+    <com.star.wars.andromeda.views.list.AndromedaListView
+        android:id="@+id/contentRV"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/navBarLayout" />
+
+    <com.star.wars.andromeda.shimmer.AndromedaShimmer
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/loadingView"
+        android:visibility="gone"
+        android:layout_marginTop="?spacing_x"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/navBarLayout"
+        app:layout="@layout/layout_shimmer_details"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
