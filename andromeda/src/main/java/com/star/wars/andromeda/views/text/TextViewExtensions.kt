@@ -4,7 +4,7 @@ import android.view.View
 import android.widget.TextView
 import androidx.annotation.StyleRes
 import androidx.core.widget.TextViewCompat
-import com.star.wars.andromeda.DebounceClickListener
+import com.star.wars.andromeda.extensions.DebounceClickListener
 
 fun TextView.setStyle(
         @StyleRes style: Int,
