@@ -23,5 +23,14 @@
         <item name="spacing_8x" category="spacing">32dp</item>
         <item name="spacing_10x" category="spacing">40dp</item>
         <item name="spacing_16x" category="spacing">64dp</item>
+
+        <item name="icon_static_black" category="color">#FF1C1D1D</item>
+        <item name="icon_static_white" category="color">#FFFFFFFF</item>
+        <item name="icon_static_inactive" category="color">#FF606161</item>
+        <item name="icon_dynamic_default" category="color">#FFFFFFFF</item>
+        <item name="icon_dynamic_active" category="color">#8c2962FF</item>
+        <item name="icon_dynamic_inactive" category="color">#FF606161</item>
+        <item name="icon_dynamic_inverted" category="color">#FF1C1D1D</item>
+        <item name="icon_dynamic_error" category="color">#FFFF323D</item>
     </style>
 </resources>
