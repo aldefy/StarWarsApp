@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="andromeda_transparent">#00000000</color>
+    <color name="andromeda_gray_alpha">#a2878787</color>
+    <color name="white">#ffffff</color>
+    <color name="gray_tint">#b2b2bf</color>
+    <color name="gray_tint_disabled">#dddde5</color>
+    <color name="gray_tint_disabled_secondary">#a2f1f2f8</color>
+    <color name="default_checkbox">#68697f</color>
+</resources>
