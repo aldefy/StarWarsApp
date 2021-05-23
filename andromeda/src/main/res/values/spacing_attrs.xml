@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="spacing_x" format="dimension" />
+    <attr name="spacing_2x" format="dimension" />
+    <attr name="spacing_3x" format="dimension" />
+    <attr name="spacing_4x" format="dimension" />
+    <attr name="spacing_5x" format="dimension" />
+    <attr name="spacing_6x" format="dimension" />
+    <attr name="spacing_8x" format="dimension" />
+    <attr name="spacing_10x" format="dimension" />
+    <attr name="spacing_16x" format="dimension" />
+</resources>

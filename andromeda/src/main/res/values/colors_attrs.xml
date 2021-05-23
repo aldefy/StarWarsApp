@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="fill_active_primary" format="color" />
+    <attr name="fill_pressed" format="color" />
+    <attr name="fill_error_primary" format="color" />
+    <attr name="fill_inactive_primary" format="color" />
+    <attr name="fill_background_primary" format="color" />
+    <attr name="fill_mute_primary" format="color" />
+    <attr name="fill_mute_secondary" format="color" />
+    <attr name="fill_background_tertiary" format="color" />
+
+    <attr name="fill_active_secondary" format="color" />
+    <attr name="fill_error_secondary" format="color" />
+    <attr name="fill_inactive_secondary" format="color" />
+    <attr name="fill_background_secondary" format="color" />
+</resources>

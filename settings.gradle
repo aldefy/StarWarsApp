@@ -3,6 +3,7 @@ include ':navigation'
 include ':common'
 include ':app'
 include ':search'
+include ':andromeda'
 
 project(":search").projectDir = new File(rootDir, "feature/search")
 rootProject.name = "Star Wars Universe"

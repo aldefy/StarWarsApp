@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Andromeda.BlueThemeDark" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="fill_active_primary" category="color">#8c2962FF</item>
+        <item name="fill_active_secondary" category="color">#FF0D47A1</item>
+        <item name="fill_inactive_primary" category="color">#FF8E8E8E</item>
+        <item name="fill_inactive_secondary" category="color">#FF363434</item>
+        <item name="fill_error_primary" category="color">#FFFF323D</item>
+        <item name="fill_error_secondary" category="color">#FF210001</item>
+        <item name="fill_mute_primary" category="color">#FF606161</item>
+        <item name="fill_mute_secondary" category="color">#FF242525</item>
+        <item name="fill_background_primary" category="color">#FF1C1D1D</item>
+        <item name="fill_background_secondary" category="color">#FF333434</item>
+        <item name="fill_background_tertiary" category="color">#FFFFFFFF</item>
+        <item name="fill_pressed" category="color">#1AFFFFFF</item>
+
+        <item name="spacing_x" category="spacing">4dp</item>
+        <item name="spacing_2x" category="spacing">8dp</item>
+        <item name="spacing_3x" category="spacing">12dp</item>
+        <item name="spacing_4x" category="spacing">16dp</item>
+        <item name="spacing_5x" category="spacing">20dp</item>
+        <item name="spacing_6x" category="spacing">24dp</item>
+        <item name="spacing_8x" category="spacing">32dp</item>
+        <item name="spacing_10x" category="spacing">40dp</item>
+        <item name="spacing_16x" category="spacing">64dp</item>
+    </style>
+</resources>
