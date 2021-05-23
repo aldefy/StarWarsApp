@@ -44,4 +44,5 @@ dependencies {
     implementation rx
     kapt compilers
     implementation project(':common')
+    implementation project(':andromeda')
 }
