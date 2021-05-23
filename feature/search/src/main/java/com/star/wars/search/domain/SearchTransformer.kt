@@ -49,6 +49,7 @@ class SearchTransformerImpl @Inject constructor() : SearchTransformer {
                     type = ViewGroupTypes.LINEAR
                 )
             ),
+            deepLink = "id",
             width = Width.FILL,
             marginsHorizontal = 16,
             marginsVertical = 8,
