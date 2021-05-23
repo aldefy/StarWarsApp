@@ -9,11 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:name=".StarWarsApplication"
-        android:theme="@style/Theme.StarWarsUniverse">
+        android:theme="@style/Andromeda.BlueThemeLight">
         <activity
             android:name=".landing.presentation.SplashActivity"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.StarWarsUniverse.NoActionBar">
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
