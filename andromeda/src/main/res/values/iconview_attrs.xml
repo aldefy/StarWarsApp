@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="AndromedaIconView">
+        <attr name="icon_name" />
+        <attr name="icon_color_token" />
+    </declare-styleable>
+</resources>
