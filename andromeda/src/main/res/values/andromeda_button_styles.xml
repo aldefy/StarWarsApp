@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="PrimaryRegular">
+        <item name="android:fontFamily">?attr/title_tiny_bold_font_name</item>
+        <item name="android:textSize">?attr/title_small_bold_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/title_small_bold_line_height</item>
+        <item name="android:textColor">?attr/title_small_bold_static_white_color</item>
+        <item name="android:textColorHint">?attr/title_small_bold_inactive_color</item>
+    </style>
+
+    <style name="PrimaryTiny">
+        <item name="android:fontFamily">?attr/title_tiny_bold_font_name</item>
+        <item name="android:textSize">?attr/title_tiny_bold_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/title_tiny_bold_line_height</item>
+        <item name="android:textColor">?attr/title_tiny_bold_static_white_color</item>
+        <item name="android:textColorHint">?attr/title_tiny_bold_inactive_color</item>
+    </style>
+
+    <style name="SecondaryPositiveRegular">
+        <item name="android:fontFamily">?attr/title_small_bold_font_name</item>
+        <item name="android:textSize">?attr/title_small_bold_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/title_small_bold_line_height</item>
+        <item name="android:textColor">@color/andromeda_secondary_positive_button</item>
+        <item name="android:textColorHint">?attr/title_small_bold_inactive_color</item>
+    </style>
+
+    <style name="SecondaryPositiveTiny">
+        <item name="android:fontFamily">?attr/title_tiny_bold_font_name</item>
+        <item name="android:textSize">?attr/title_tiny_bold_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/title_tiny_bold_line_height</item>
+        <item name="android:textColor">@color/andromeda_secondary_positive_button</item>
+        <item name="android:textColorHint">?attr/title_tiny_bold_inactive_color</item>
+    </style>
+
+    <style name="SecondaryDestructiveRegular">
+        <item name="android:fontFamily">?attr/title_small_bold_font_name</item>
+        <item name="android:textSize">?attr/title_small_bold_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/title_small_bold_line_height</item>
+        <item name="android:textColor">@color/andromeda_secondary_destructive_button</item>
+        <item name="android:textColorHint">?attr/title_small_bold_inactive_color</item>
+    </style>
+
+    <style name="SecondaryDestructiveTiny">
+        <item name="android:fontFamily">?attr/title_tiny_bold_font_name</item>
+        <item name="android:textSize">?attr/title_tiny_bold_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/title_tiny_bold_line_height</item>
+        <item name="android:textColor">@color/andromeda_secondary_destructive_button</item>
+        <item name="android:textColorHint">?attr/title_tiny_bold_inactive_color</item>
+    </style>
+
+    <style name="SecondaryInvertedRegular">
+        <item name="android:fontFamily">?attr/title_small_bold_font_name</item>
+        <item name="android:textSize">?attr/title_small_bold_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/title_small_bold_line_height</item>
+        <item name="android:textColor">@color/andromeda_secondary_inverted_button</item>
+        <item name="android:textColorHint">?attr/title_small_bold_inactive_color</item>
+    </style>
+
+    <style name="SecondaryInvertedTiny">
+        <item name="android:fontFamily">?attr/title_tiny_bold_font_name</item>
+        <item name="android:textSize">?attr/title_tiny_bold_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/title_tiny_bold_line_height</item>
+        <item name="android:textColor">@color/andromeda_secondary_inverted_button</item>
+        <item name="android:textColorHint">?attr/title_tiny_bold_inactive_color</item>
+    </style>
+
+    <style name="TertiaryPositiveRegular">
+        <item name="android:fontFamily">?attr/title_small_bold_font_name</item>
+        <item name="android:textSize">?attr/title_small_bold_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/title_small_bold_line_height</item>
+        <item name="android:textColor">@color/andromeda_tertiary_positive_button</item>
+        <item name="android:textColorHint">?attr/title_small_bold_inactive_color</item>
+    </style>
+
+    <style name="TertiaryPositiveTiny">
+        <item name="android:fontFamily">?attr/title_tiny_bold_font_name</item>
+        <item name="android:textSize">?attr/title_tiny_bold_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/title_tiny_bold_line_height</item>
+        <item name="android:textColor">@color/andromeda_tertiary_positive_button</item>
+        <item name="android:textColorHint">?attr/title_tiny_bold_inactive_color</item>
+    </style>
+
+    <style name="TertiaryDestructiveRegular">
+        <item name="android:fontFamily">?attr/title_small_bold_font_name</item>
+        <item name="android:textSize">?attr/title_small_bold_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/title_small_bold_line_height</item>
+        <item name="android:textColor">@color/andromeda_tertiary_destructive_button</item>
+        <item name="android:textColorHint">?attr/title_small_bold_inactive_color</item>
+    </style>
+
+    <style name="TertiaryDestructiveTiny">
+        <item name="android:fontFamily">?attr/title_tiny_bold_font_name</item>
+        <item name="android:textSize">?attr/title_tiny_bold_font_size</item>
+        <item name="android:lineSpacingExtra">?attr/title_tiny_bold_line_height</item>
+        <item name="android:textColor">@color/andromeda_tertiary_destructive_button</item>
+        <item name="android:textColorHint">?attr/title_tiny_bold_inactive_color</item>
+    </style>
+</resources>
