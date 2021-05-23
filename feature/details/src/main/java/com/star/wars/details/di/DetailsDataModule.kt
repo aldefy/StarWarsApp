@@ -1,6 +1,6 @@
-package com.star.wars.search.di
+package com.star.wars.details.di
 
-import com.star.wars.search.model.SearchApi
+import com.star.wars.details.model.DetailsApi
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -9,9 +9,9 @@ import retrofit2.Retrofit
 
 @Module
 @InstallIn(ViewModelComponent::class)
-class SearchDataModule {
+class DetailsDataModule {
     @Provides
-    fun providesSearchApi(retrofit: Retrofit): SearchApi {
-        return retrofit.create(SearchApi::class.java)
+    fun providesDetailsApi(retrofit: Retrofit): DetailsApi {
+        return retrofit.create(DetailsApi::class.java)
     }
 }
