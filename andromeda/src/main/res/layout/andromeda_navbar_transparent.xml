@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_root"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:paddingLeft="?attr/spacing_4x"
+    android:paddingRight="?attr/spacing_4x">
+
+    <com.star.wars.andromeda.views.button.AndromedaCircularButton
+        android:id="@+id/transparent_navigation_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:icon_color_token="?attr/icon_dynamic_default"
+        app:circular_btn_type="circular_secondary_regular"
+        app:icon_name="navigation_back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible"
+        />
+
+    <com.star.wars.andromeda.views.button.AndromedaCircularButton
+        android:id="@+id/transparent_navigation_menu_icon_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:circular_btn_type="circular_secondary_regular"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.star.wars.andromeda.views.button.AndromedaCircularButton
+        android:id="@+id/transparent_navigation_menu_icon_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="?attr/spacing_3x"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:circular_btn_type="circular_secondary_regular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/transparent_navigation_menu_icon_1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
