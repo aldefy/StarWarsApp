@@ -7,6 +7,8 @@ import android.os.Handler
 import android.os.Looper
 import androidx.activity.viewModels
 import com.star.wars.andromeda.AndromedaTheme
+import com.star.wars.andromeda.theme.getTheme
+import com.star.wars.andromeda.theme.setTheme
 import com.star.wars.common.addTo
 import com.star.wars.common.base.BaseActivity
 import com.star.wars.common.viewBinding
@@ -50,7 +52,7 @@ class DetailsActivity : BaseActivity<DetailsState>() {
         screen.bind(binding, state.share())
             .addTo(compositeBag)
 
-        screen.initNavBar(binding, CharacterDetailsMeta("", emptyList()), R.menu.menu_details)
+        screen.initNavBar(binding, meta?.characterName ?: "", R.menu.menu_details)
 
         screen.event.observe(
             this,
@@ -72,10 +74,10 @@ class DetailsActivity : BaseActivity<DetailsState>() {
     }
 
     private fun toggleTheme() {
-        if (com.star.wars.andromeda.theme.getTheme(this).isDarkTheme) {
-            com.star.wars.andromeda.theme.setTheme(this, AndromedaTheme.LIGHT)
+        if (getTheme(this).isDarkTheme) {
+            setTheme(this, AndromedaTheme.LIGHT)
         } else {
-            com.star.wars.andromeda.theme.setTheme(this, AndromedaTheme.DARK)
+            setTheme(this, AndromedaTheme.DARK)
         }
         val intent = intent
         Handler(Looper.myLooper()!!).postDelayed({

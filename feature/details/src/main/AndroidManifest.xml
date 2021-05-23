@@ -3,6 +3,11 @@
     package="com.star.wars.details">
 
     <application>
-        <activity android:name=".presentation.DetailsActivity" />
+        <activity android:name=".presentation.DetailsActivity">
+            <intent-filter>
+                <action android:name="starwars://details" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
     </application>
 </manifest>

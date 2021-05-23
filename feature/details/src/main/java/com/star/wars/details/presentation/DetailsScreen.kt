@@ -44,11 +44,11 @@ class DetailsScreenImpl : DetailsScreen {
 
     fun initNavBar(
         binding: ActivityDetailsBinding,
-        meta: CharacterDetailsMeta,
+        title:String,
         @MenuRes menu: Int
     ) {
         with(binding.navBarLayout.navBar) {
-            setTitle(meta.characterName)
+            setTitle(title)
             setSubtitle(resources.getString(R.string.navbar_details_subtitle))
             showNavigationIcon(
                 Icon.NAVIGATION_BACK,
