@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.star.wars.andromeda.views.shadow.AndromedaShadowLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navbar_shadow"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:enable_shadow_left="false"
+    app:enable_shadow_right="false"
+    app:enable_shadow_top="false"
+    app:shadow_enabled="false"
+    app:sl_type="high">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/navigation_root"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="?attr/fill_background_primary">
+
+        <com.star.wars.andromeda.views.icons.AndromedaIconView
+            android:id="@+id/navigation_back"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:visibility="gone"
+            android:layout_marginStart="?spacing_2x"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription"
+            tools:visibility="visible" />
+
+        <Space
+            android:id="@+id/navigation_back_space"
+            android:layout_width="?attr/spacing_2x"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toEndOf="@id/navigation_back"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/navigation_back_group"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            app:constraint_referenced_ids="navigation_back,navigation_back_space"
+            tools:ignore="UnknownId" />
+
+        <FrameLayout
+            android:id="@+id/title_view_container"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="?spacing_2x"
+            app:layout_constraintEnd_toStartOf="@id/navigation_menu_container"
+            app:layout_constraintStart_toEndOf="@id/navigation_back_space" />
+
+        <FrameLayout
+            android:id="@+id/navigation_menu_container"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="?spacing_2x"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <com.star.wars.andromeda.views.button.AndromedaButton
+            android:id="@+id/navbar_contextual_action"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:btn_type="primary_positive_tiny"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="?spacing_2x"
+            app:layout_constraintTop_toTopOf="parent"
+            app:text="Next"
+            tools:visibility="visible" />
+
+        <com.star.wars.andromeda.views.divider.AndromedaDivider
+            android:id="@+id/navbar_divider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:visibility="visible" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.star.wars.andromeda.views.shadow.AndromedaShadowLayout>

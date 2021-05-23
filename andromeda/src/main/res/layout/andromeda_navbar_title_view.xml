@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navbar_title_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/navigation_logo"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription"
+        tools:visibility="gone" />
+
+    <Space
+        android:id="@+id/navigation_logo_space"
+        android:layout_width="10dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toEndOf="@id/navigation_logo"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/navigation_logo_group"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:constraint_referenced_ids="navigation_logo,navigation_logo_space"
+        tools:ignore="UnknownId" />
+
+    <com.star.wars.andromeda.views.text.AndromedaTextView
+        android:id="@+id/navigation_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="?attr/spacing_x"
+        android:ellipsize="end"
+        android:maxLines="1"
+        app:layout_constraintBottom_toTopOf="@id/navigation_subtitle"
+        app:layout_constraintStart_toEndOf="@id/navigation_logo_space"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:typographyStyle="title_moderate_bold_default"
+        tools:text="Title goes here" />
+
+    <com.star.wars.andromeda.views.text.AndromedaTextView
+        android:id="@+id/navigation_subtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/navigation_title"
+        app:layout_constraintStart_toStartOf="@id/navigation_title"
+        app:layout_constraintTop_toBottomOf="@id/navigation_title"
+        app:typographyStyle="title_small_demi_inactive"
+        tools:text="Subtitle goes here"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

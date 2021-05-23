@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="AndromedaNavBar">
+        <attr name="title" />
+        <attr name="subtitle" />
+        <attr name="navigate_back_accessibility_description" format="string" />
+        <attr name="logo" format="reference" />
+        <attr name="navbar_divider" format="enum">
+            <enum name="none" value="0" />
+            <enum name="line" value="1" />
+            <enum name="shadow" value="2" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="AndromedaTransparentNavBar">
+        <attr name="navigate_back_accessibility_description" />
+    </declare-styleable>
+</resources>
