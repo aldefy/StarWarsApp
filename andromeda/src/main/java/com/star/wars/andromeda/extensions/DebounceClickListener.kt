@@ -1,4 +1,4 @@
-package com.star.wars.andromeda
+package com.star.wars.andromeda.extensions
 
 import android.os.Handler
 import android.view.View
