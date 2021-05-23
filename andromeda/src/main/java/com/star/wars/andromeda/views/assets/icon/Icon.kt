@@ -43,6 +43,11 @@ enum class Icon {
         override fun getDrawableResId(): Int {
             return R.drawable.andromeda_icon_search
         }
+    },
+    UNIVERSE {
+        override fun getDrawableResId(): Int {
+            return R.drawable.andromeda_icon_universe
+        }
     };
 
 

@@ -9,5 +9,6 @@
         <enum name="navigation_options" value="5" />
         <enum name="navigation_overflow" value="6" />
         <enum name="search" value="7" />
+        <enum name="universe" value="8" />
     </attr>
 </resources>
