@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="AndromedaSpinner">
+        <attr name="spinner_type" format="enum">
+            <enum name="small" value="0" />
+            <enum name="big" value="1" />
+        </attr>
+        <attr name="tint_color_token" format="reference" />
+        <attr name="accessibility_description" />
+    </declare-styleable>
+</resources>
