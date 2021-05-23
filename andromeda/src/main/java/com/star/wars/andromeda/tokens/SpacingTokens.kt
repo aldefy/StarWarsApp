@@ -6,8 +6,6 @@ import androidx.fragment.app.Fragment
 import com.star.wars.andromeda.AndromedaAttributeManager
 import com.star.wars.andromeda.R
 
-// Auto Generated
-
 inline val View.spacing_x get() = context.spacing_x
 inline val Fragment.spacing_x get() = requireContext().spacing_x
 inline val Context.spacing_x: Float
