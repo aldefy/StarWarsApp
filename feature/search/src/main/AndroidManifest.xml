@@ -3,7 +3,8 @@
     package="com.star.wars.search">
 
     <application>
-        <activity android:name=".presentation.SearchActivity">
+        <activity android:name=".presentation.SearchActivity"
+            android:theme="@style/Andromeda.BlueThemeLight">
             <intent-filter>
                 <action android:name="starwars://search" />
                 <category android:name="android.intent.category.DEFAULT" />
