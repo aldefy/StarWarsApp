@@ -40,4 +40,5 @@ dependencies {
     implementation kotlin
     api androidX
     api google
+    api 'com.airbnb.android:lottie:3.7.0'
 }
