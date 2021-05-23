@@ -7,6 +7,14 @@
         android:id="@+id/splashScreen"
         android:label="@string/app_name"
         app:layout="@layout/layout_splash_screen">
+        <action
+            android:id="@+id/nav_spalash_search"
+            app:destination="@id/search" />
     </view>
+
+    <activity
+        android:id="@+id/search"
+        android:name="com.star.wars.search.presentation.SearchActivity"
+        android:label="@string/app_name" />
 
 </navigation>
