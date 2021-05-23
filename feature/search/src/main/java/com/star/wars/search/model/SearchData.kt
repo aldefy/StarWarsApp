@@ -7,10 +7,10 @@ data class SearchPeopleResponse(
     @SerializedName("count")
     val count: Int = 0,
     @SerializedName("results")
-    val results: List<ResultsItem>
+    val results: List<CharacterResultItem>
 )
 
-data class ResultsItem(
+data class CharacterResultItem(
     @SerializedName("films")
     val films: List<String>?,
     @SerializedName("homeworld")
