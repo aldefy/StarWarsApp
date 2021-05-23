@@ -9,11 +9,9 @@
         android:id="@+id/view_4"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:layout_margin="?spacing_8x"
+        android:layout_margin="?spacing_2x"
         android:background="@drawable/andromeda_shimmer_rectangle"
         app:layout_constraintEnd_toEndOf="parent"
-        android:paddingStart="?spacing_4x"
-        android:paddingEnd="?spacing_4x"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
