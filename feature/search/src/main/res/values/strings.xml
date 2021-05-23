@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="search_character" tools:ignore="ExtraTranslation">Search character</string>
-    <string name="navbar_search_title">Star Wars Universe</string>
-    <string name="navbar_search_subtitle">Search characters</string>
+    <string name="navbar_search_title">Star Wars</string>
+    <string name="navbar_search_subtitle">Universe</string>
 </resources>
