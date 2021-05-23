@@ -2,6 +2,8 @@ package com.star.wars.landing.presentation
 
 import android.os.Bundle
 import androidx.activity.viewModels
+import androidx.navigation.findNavController
+import com.star.wars.R
 import com.star.wars.landing.presentation.SplashEvent.*
 import com.star.wars.common.addTo
 import com.star.wars.common.base.FullScreenActivity
@@ -43,6 +45,8 @@ class SplashActivity : FullScreenActivity<SplashState>() {
                         vm.startTimer()
                     }
                     is NavigateToNextScreenEvent -> {
+                        findNavController(R.id.navHost).navigate(R.id.nav_spalash_search)
+                        finish()
                     }
                 }
             }
