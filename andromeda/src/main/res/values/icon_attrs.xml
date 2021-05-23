@@ -3,11 +3,11 @@
     <attr name="icon_name" format="enum">
         <enum name="notification" value="0" />
         <enum name="navigation_back" value="1" />
-        <enum name="cancel" value="3" />
-        <enum name="share" value="4" />
-        <enum name="switch_theme" value="5" />
-        <enum name="navigation_options" value="6" />
-        <enum name="navigation_overflow" value="7" />
-        <enum name="search" value="8" />
+        <enum name="navigation_cancel" value="2" />
+        <enum name="share" value="3" />
+        <enum name="switch_theme" value="4" />
+        <enum name="navigation_options" value="5" />
+        <enum name="navigation_overflow" value="6" />
+        <enum name="search" value="7" />
     </attr>
 </resources>
