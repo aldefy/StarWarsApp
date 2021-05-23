@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="AndromedaButton">
+        <attr name="loading_state_content_description" />
+        <attr name="accessibility_description" />
+        <attr name="loading" />
+        <attr name="enabled" />
+        <attr name="text" />
+        <attr name="radius" format="float"/>
+        <attr name="icon_name" />
+        <attr name="icon_color_token" />
+        <attr name="btn_type" format="enum">
+            <enum name="primary_positive_regular" value="0" />
+            <enum name="primary_positive_tiny" value="1" />
+            <enum name="primary_positive_full_width" value="2" />
+            <enum name="primary_destructive_regular" value="3" />
+            <enum name="primary_destructive_tiny" value="4" />
+            <enum name="primary_destructive_full_width" value="5" />
+            <enum name="secondary_positive_regular" value="6" />
+            <enum name="secondary_positive_tiny" value="7" />
+            <enum name="secondary_destructive_regular" value="8" />
+            <enum name="secondary_destructive_tiny" value="9" />
+            <enum name="secondary_static_white_regular" value="10" />
+            <enum name="secondary_static_white_tiny" value="11" />
+            <enum name="tertiary_positive_regular" value="12" />
+            <enum name="tertiary_positive_tiny" value="13" />
+            <enum name="tertiary_destructive_regular" value="14" />
+            <enum name="tertiary_destructive_tiny" value="15" />
+        </attr>
+    </declare-styleable>
+</resources>
