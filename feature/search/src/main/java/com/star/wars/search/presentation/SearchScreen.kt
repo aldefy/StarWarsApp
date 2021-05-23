@@ -45,7 +45,9 @@ class SearchScreenImpl : SearchScreen {
                 if (text.isEmpty()) {
                     _event.value = SearchEvent.SearchCleared
                 }
-                _event.value = SearchEvent.SearchTriggeredEvent(text.toString())
+                if (text.length >= 2) {
+                    _event.value = SearchEvent.SearchTriggeredEvent(text.toString())
+                }
             }
         }
     }
@@ -72,12 +74,14 @@ class SearchScreenImpl : SearchScreen {
             .ofType(SearchState.ShowLoading::class.java)
             .subscribe {
                 binding.loadingView.makeVisible()
+                binding.contentRV.makeGone()
             }
             .addTo(bag)
 
         observable
             .ofType(SearchState.HideLoading::class.java)
             .subscribe {
+                binding.contentRV.makeVisible()
                 binding.loadingView.makeGone()
             }
             .addTo(bag)

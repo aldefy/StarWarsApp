@@ -43,12 +43,15 @@ class SearchTransformerImpl @Inject constructor() : SearchTransformer {
                             gravity = Gravity.START
                         )
                     ),
+                    paddingHorizontal = 8,
+                    paddingVertical = 8,
                     orientation = Orientation.VERTICAL,
                     type = ViewGroupTypes.LINEAR
                 )
             ),
             width = Width.FILL,
             marginsHorizontal = 16,
+            marginsVertical = 8,
             type = ViewGroupTypes.CARD
         )
     }
