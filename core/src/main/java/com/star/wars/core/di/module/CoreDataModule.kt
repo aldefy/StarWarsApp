@@ -16,7 +16,7 @@ import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
-import javax.inject.Named
+import java.util.concurrent.TimeUnit
 
 @Module
 @InstallIn(SingletonComponent::class)
@@ -58,9 +58,13 @@ class CoreDataModule {
     }
 
     @Provides
-    @Named("user_configs_factory")
-    fun providesConfigsGsonFactory(@Named("user_config_gson") gson: Gson): GsonConverterFactory {
-        return GsonConverterFactory.create(gson)
+    fun providesOkHttpClient(chuckerInterceptor: ChuckerInterceptor): OkHttpClient {
+        return OkHttpClient.Builder()
+            .readTimeout(300, TimeUnit.SECONDS)
+            .writeTimeout(300, TimeUnit.SECONDS)
+            .connectTimeout(300, TimeUnit.SECONDS)
+            .addNetworkInterceptor(chuckerInterceptor)
+            .build()
     }
 
     @Provides
@@ -76,20 +80,4 @@ class CoreDataModule {
             .client(client)
             .build()
     }
-
-    @Provides
-    @Named("monk-config-retrofit")
-    fun providesMonkConfigRetrofit(
-        client: OkHttpClient,
-        coreConfig: CoreConfig,
-        @Named("user_configs_factory") configsFactory: GsonConverterFactory
-    ): Retrofit {
-        return Retrofit.Builder()
-            .addConverterFactory(configsFactory)
-            .baseUrl(coreConfig.getBaseUrl())
-            .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-            .client(client)
-            .build()
-    }
-
 }
