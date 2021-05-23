@@ -1,8 +1,11 @@
 package com.star.wars.search.presentation
 
+import androidx.core.widget.doOnTextChanged
 import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import com.star.wars.andromeda.extensions.makeGone
+import com.star.wars.andromeda.extensions.makeVisible
 import com.star.wars.common.addTo
 import com.star.wars.search.databinding.ActivitySearchBinding
 import com.star.wars.search.domain.SearchState
@@ -34,6 +37,18 @@ class SearchScreenImpl : SearchScreen {
         }
     }
 
+    fun addSearchHandler(
+        binding: ActivitySearchBinding
+    ) {
+        binding.layoutSearch.inputSearch.doOnTextChanged { text, _, _, _ ->
+            if (!text.isNullOrEmpty()) {
+                if (text.isEmpty()) {
+                    _event.value = SearchEvent.SearchCleared
+                }
+                _event.value = SearchEvent.SearchTriggeredEvent(text.toString())
+            }
+        }
+    }
 
     private fun handleContent(
         binding: ActivitySearchBinding,
@@ -43,6 +58,7 @@ class SearchScreenImpl : SearchScreen {
         observable
             .ofType(SearchState.LoadData::class.java)
             .subscribe {
+                binding.contentRV.setUpComponents(it.data)
             }
             .addTo(bag)
     }
@@ -55,14 +71,14 @@ class SearchScreenImpl : SearchScreen {
         observable
             .ofType(SearchState.ShowLoading::class.java)
             .subscribe {
-               // binding.loadingView.show()
+                binding.loadingView.makeVisible()
             }
             .addTo(bag)
 
         observable
             .ofType(SearchState.HideLoading::class.java)
             .subscribe {
-                //binding.loadingView.hide()
+                binding.loadingView.makeGone()
             }
             .addTo(bag)
     }

@@ -2,8 +2,6 @@ package com.star.wars.search.presentation
 
 import android.os.Bundle
 import androidx.activity.viewModels
-import com.star.wars.andromeda.Color
-import com.star.wars.andromeda.toColorToken
 import com.star.wars.andromeda.tokens.icon_dynamic_default
 import com.star.wars.andromeda.views.assets.icon.Icon
 import com.star.wars.andromeda.views.navbar.AndromedaNavBar
@@ -55,14 +53,21 @@ class SearchActivity : BaseActivity<SearchState>() {
         )
         screen.bind(binding, state.share())
             .addTo(compositeBag)
+        screen.addSearchHandler(binding)
         screen.event.observe(
             this,
             { event ->
                 when (event) {
                     is SearchResultsFetched -> {
+                        //analytics events trigger
                     }
                     is SearchErrorEvent -> {
+                        //analytics events trigger
                     }
+                    is SearchEvent.SearchCleared -> {
+                        //TODO - add a clear logic on list
+                    }
+                    is SearchEvent.SearchTriggeredEvent -> vm.searchCharacter(event.searchText)
                 }
             }
         )

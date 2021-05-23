@@ -1,9 +1,6 @@
 package com.star.wars.search.di
 
-import com.star.wars.search.domain.SearchInteractor
-import com.star.wars.search.domain.SearchRepository
-import com.star.wars.search.domain.SearchRepositoryImpl
-import com.star.wars.search.domain.SearchUseCase
+import com.star.wars.search.domain.*
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
@@ -15,6 +12,9 @@ abstract class SearchModule {
 
     @Binds
     abstract fun repo(impl: SearchRepositoryImpl): SearchRepository
+
+    @Binds
+    abstract fun transformer(impl: SearchTransformerImpl): SearchTransformer
 
     @Binds
     abstract fun useCase(impl: SearchInteractor): SearchUseCase
