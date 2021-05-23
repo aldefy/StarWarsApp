@@ -2,4 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.star.wars.search">
 
+    <application>
+        <activity android:name=".presentation.SearchActivity">
+            <intent-filter>
+                <action android:name="starwars://search" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+    </application>
 </manifest>
