@@ -1,8 +1,12 @@
 package com.star.wars.andromeda.views.list.internal
 
+import com.airbnb.epoxy.Carousel
+import com.airbnb.epoxy.CarouselModel_
 import com.airbnb.epoxy.EpoxyModel
 import com.star.wars.andromeda.extensions.ViewComponentNotDrawnHandler
+import com.star.wars.andromeda.extensions.dpToPixels
 import com.star.wars.andromeda.views.list.ComponentData
+import com.star.wars.andromeda.views.list.internal.component.carousel.data.CarouselComponentData
 import com.star.wars.andromeda.views.list.internal.component.empty.EmptyComponent_
 import com.star.wars.andromeda.views.list.internal.component.text.TextComponent_
 import com.star.wars.andromeda.views.list.internal.component.text.data.TextComponentData
@@ -46,6 +50,27 @@ fun generateModel(
                     .gridComponentData(data)
                     .deepLinkHandler(deepLinkHandler)
             }
+        }
+        is CarouselComponentData -> {
+            val children = data.children.map { dj ->
+                generateModel(
+                    data = dj,
+                    deepLinkHandler = deepLinkHandler,
+                    viewComponentNotDrawnHandler = viewComponentNotDrawnHandler
+                )
+            }
+            CarouselModel_()
+                .id(data.id)
+                .padding(
+                    Carousel.Padding(
+                        data.paddingHorizontal.dpToPixels(),
+                        data.paddingVertical.dpToPixels(),
+                        data.paddingHorizontal.dpToPixels(),
+                        data.paddingVertical.dpToPixels(),
+                        0
+                    )
+                )
+                .models(children)
         }
         else -> {
             EmptyComponent_().id(data.id).also {
