@@ -38,6 +38,11 @@ enum class Icon {
         override fun getDrawableResId(): Int {
             return R.drawable.andromeda_icon_navigation_overflow
         }
+    },
+    SEARCH {
+        override fun getDrawableResId(): Int {
+            return R.drawable.andromeda_icon_search
+        }
     };
 
 

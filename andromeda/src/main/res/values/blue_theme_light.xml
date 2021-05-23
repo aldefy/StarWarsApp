@@ -180,7 +180,7 @@
         <item name="icon_static_black" category="color">#FF1C1D1D</item>
         <item name="icon_static_white" category="color">#FFFFFFFF</item>
         <item name="icon_static_inactive" category="color">#FF606161</item>
-        <item name="icon_dynamic_default" category="color">#FFFFFFFF</item>
+        <item name="icon_dynamic_default" category="color">#FF494A4A</item>
         <item name="icon_dynamic_active" category="color">#8c2962FF</item>
         <item name="icon_dynamic_inactive" category="color">#FF606161</item>
         <item name="icon_dynamic_inverted" category="color">#FF1C1D1D</item>
