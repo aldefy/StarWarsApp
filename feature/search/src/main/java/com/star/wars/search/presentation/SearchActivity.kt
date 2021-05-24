@@ -1,5 +1,6 @@
 package com.star.wars.search.presentation
 
+import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -10,6 +11,7 @@ import com.star.wars.andromeda.theme.getTheme
 import com.star.wars.andromeda.theme.setTheme
 import com.star.wars.common.addTo
 import com.star.wars.common.base.BaseActivity
+import com.star.wars.common.data.CharacterDetailsMeta
 import com.star.wars.common.viewBinding
 import com.star.wars.search.R
 import com.star.wars.search.databinding.ActivitySearchBinding
@@ -19,6 +21,7 @@ import com.star.wars.search.model.CharacterResultItem
 import com.star.wars.search.presentation.SearchEvent.SearchErrorEvent
 import com.star.wars.search.presentation.SearchEvent.SearchResultsFetched
 import dagger.hilt.android.AndroidEntryPoint
+
 
 @AndroidEntryPoint
 class SearchActivity : BaseActivity<SearchState>() {
@@ -64,11 +67,13 @@ class SearchActivity : BaseActivity<SearchState>() {
                     }
                     is SearchEvent.SearchTriggeredEvent -> vm.searchCharacter(event.searchText)
                     is SearchEvent.ClickFiredEvent -> {
-                        Toast.makeText(
-                            this,
-                            "Deeplink fired: ${(event.extraPayload as CharacterResultItem).name}",
-                            Toast.LENGTH_SHORT
-                        ).show()
+                        val intent = Intent()
+                        intent.action = "starwars://details"
+                        intent.putExtra(
+                            "details_meta",
+                            event.extraPayload
+                        )
+                        startActivity(intent)
                     }
                     is SearchEvent.CloseScreen -> {
                         finish()
@@ -82,10 +87,9 @@ class SearchActivity : BaseActivity<SearchState>() {
     }
 
     private fun toggleTheme() {
-        if(getTheme(this).isDarkTheme){
+        if (getTheme(this).isDarkTheme) {
             setTheme(this, AndromedaTheme.LIGHT)
-        }
-        else {
+        } else {
             setTheme(this, AndromedaTheme.DARK)
         }
         val intent = intent

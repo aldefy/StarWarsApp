@@ -11,12 +11,15 @@ import com.star.wars.andromeda.tokens.icon_dynamic_default
 import com.star.wars.andromeda.views.assets.icon.Icon
 import com.star.wars.andromeda.views.navbar.AndromedaNavBar
 import com.star.wars.common.addTo
+import com.star.wars.common.data.CharacterDetailsMeta
 import com.star.wars.search.R
 import com.star.wars.search.databinding.ActivitySearchBinding
 import com.star.wars.search.domain.SearchState
+import com.star.wars.search.model.CharacterResultItem
 import io.reactivex.Observable
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.disposables.Disposable
+import timber.log.Timber
 
 interface SearchScreen : LifecycleObserver {
     val event: LiveData<SearchEvent>
@@ -60,9 +63,16 @@ class SearchScreenImpl : SearchScreen {
     fun setupComponentHandlers(
         binding: ActivitySearchBinding
     ) {
-        with(binding.contentRV){
+        with(binding.contentRV) {
             setComponentClickHandler {
-                _event.value = SearchEvent.ClickFiredEvent(it)
+                if (it is CharacterResultItem) {
+                    val meta = CharacterDetailsMeta(
+                        it.name,
+                        listOf(it.url)
+                    )
+                    Timber.tag("Search").d("Clicked : $meta")
+                    _event.value = SearchEvent.ClickFiredEvent(meta)
+                }
             }
             setViewComponentNotDrawnHandler {
                 _event.value = SearchEvent.ComponentNotDrawnEvent(it)
