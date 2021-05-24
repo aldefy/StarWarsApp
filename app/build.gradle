@@ -60,4 +60,5 @@ dependencies {
     implementation project(':andromeda')
 
     implementation project(':search')
+    implementation project(':details')
 }
