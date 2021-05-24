@@ -1,4 +1,4 @@
-package com.star.wars.details.model
+package com.star.wars.common.data
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize

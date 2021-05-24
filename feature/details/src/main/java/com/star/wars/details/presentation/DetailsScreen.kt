@@ -6,14 +6,12 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.star.wars.andromeda.extensions.makeGone
 import com.star.wars.andromeda.extensions.makeVisible
-import com.star.wars.andromeda.tokens.icon_dynamic_default
 import com.star.wars.andromeda.views.assets.icon.Icon
 import com.star.wars.andromeda.views.navbar.AndromedaNavBar
 import com.star.wars.common.addTo
 import com.star.wars.details.R
 import com.star.wars.details.databinding.ActivityDetailsBinding
 import com.star.wars.details.domain.DetailsState
-import com.star.wars.details.model.CharacterDetailsMeta
 import io.reactivex.Observable
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.disposables.Disposable

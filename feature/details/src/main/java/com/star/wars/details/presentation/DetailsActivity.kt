@@ -11,12 +11,12 @@ import com.star.wars.andromeda.theme.getTheme
 import com.star.wars.andromeda.theme.setTheme
 import com.star.wars.common.addTo
 import com.star.wars.common.base.BaseActivity
+import com.star.wars.common.data.CharacterDetailsMeta
 import com.star.wars.common.viewBinding
 import com.star.wars.details.R
 import com.star.wars.details.databinding.ActivityDetailsBinding
 import com.star.wars.details.domain.DetailsState
 import com.star.wars.details.domain.DetailsViewModel
-import com.star.wars.details.model.CharacterDetailsMeta
 import dagger.hilt.android.AndroidEntryPoint
 
 const val EXTRA_META = "details_meta"
