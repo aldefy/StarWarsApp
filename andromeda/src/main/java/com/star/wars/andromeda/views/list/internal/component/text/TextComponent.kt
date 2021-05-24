@@ -10,6 +10,7 @@ import com.airbnb.epoxy.EpoxyAttribute
 import com.airbnb.epoxy.EpoxyModelClass
 import com.airbnb.epoxy.EpoxyModelWithHolder
 import com.star.wars.andromeda.R
+import com.star.wars.andromeda.extensions.ComponentClickHandler
 import com.star.wars.andromeda.extensions.clickable
 import com.star.wars.andromeda.extensions.dpToPixels
 import com.star.wars.andromeda.extensions.unclickable
@@ -29,7 +30,7 @@ abstract class TextComponent : EpoxyModelWithHolder<TextComponent.Holder>() {
     lateinit var textComponentData: TextComponentData
 
     @EpoxyAttribute
-    var deepLinkHandler: (String) -> Unit = {}
+    var componentClickHandler: ComponentClickHandler = {}
 
     override fun getDefaultLayout(): Int {
         return R.layout.andromeda_layout_text_component
@@ -95,30 +96,17 @@ abstract class TextComponent : EpoxyModelWithHolder<TextComponent.Holder>() {
                     unclickable()
                 }
             }
-            /** Used for demo unrelated to production deeplink click handling **DON'T TOUCH** **/
-            setOnClickListener { view ->
-                deepLinkHandler(textComponentData.deepLink)
-                textComponentData.navigateToOnClick?.let { navigateClassName ->
-                    if (navigateClassName.isNotEmpty()) {
-                        view.context.startActivity(
-                            Intent(
-                                view.context,
-                                Class.forName(navigateClassName)
-                            )
-                        )
-                    }
-                }
-            }
-
         }
-        /** Used for demo unrelated to production deeplink click handling **DON'T TOUCH** **/
-        if (textComponentData.isClickable) {
-            val outValue = TypedValue()
-            holder.textView.context.theme
-                .resolveAttribute(android.R.attr.selectableItemBackground, outValue, true)
-            holder.textView.setBackgroundResource(outValue.resourceId)
-        } else {
-            holder.textView.background = null
+        with(holder.rootContainer) {
+            if (textComponentData.isViewClickable()) {
+                clickable()
+                setOnClickListener {
+                    componentClickHandler(textComponentData.extraPayload!!)
+                }
+            } else {
+                unclickable()
+                setOnClickListener(null)
+            }
         }
     }
 

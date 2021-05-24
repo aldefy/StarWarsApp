@@ -9,7 +9,7 @@ import com.airbnb.epoxy.EpoxyAttribute
 import com.airbnb.epoxy.EpoxyModelClass
 import com.airbnb.epoxy.EpoxyModelWithHolder
 import com.star.wars.andromeda.R
-import com.star.wars.andromeda.extensions.DeepLinkHandler
+import com.star.wars.andromeda.extensions.ComponentClickHandler
 import com.star.wars.andromeda.extensions.clickable
 import com.star.wars.andromeda.extensions.dpToPixels
 import com.star.wars.andromeda.extensions.unclickable
@@ -28,7 +28,7 @@ abstract class GridComponent : EpoxyModelWithHolder<GridComponent.Holder>() {
     lateinit var gridComponentData: ViewGroupComponentData
 
     @EpoxyAttribute
-    lateinit var deepLinkHandler: DeepLinkHandler
+    lateinit var componentClickHandler: ComponentClickHandler
 
     override fun getDefaultLayout(): Int {
         return R.layout.andromeda_grid
@@ -58,7 +58,7 @@ abstract class GridComponent : EpoxyModelWithHolder<GridComponent.Holder>() {
             gridComponentData.paddingHorizontal.dpToPixels(),
             gridComponentData.paddingVertical.dpToPixels()
         )
-        holder.gridERV.setDeepLinkHandler(deepLinkHandler)
+        holder.gridERV.setComponentClickHandler(componentClickHandler)
         holder.gridERV.setSpanCount(gridComponentData.spanCount)
         holder.gridERV.updateLayoutParams<ConstraintLayout.LayoutParams> {
             topMargin = gridComponentData.marginsVertical.dpToPixels()
@@ -103,7 +103,7 @@ abstract class GridComponent : EpoxyModelWithHolder<GridComponent.Holder>() {
         if (gridComponentData.isViewClickable()) {
             holder.rootView.clickable()
             holder.rootView.setOnClickListener {
-                deepLinkHandler(gridComponentData.deepLink)
+                componentClickHandler(gridComponentData.extraPayload!!)
             }
         } else {
             holder.rootView.unclickable()

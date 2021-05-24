@@ -15,6 +15,7 @@ import com.star.wars.search.R
 import com.star.wars.search.databinding.ActivitySearchBinding
 import com.star.wars.search.domain.SearchState
 import com.star.wars.search.domain.SearchViewModel
+import com.star.wars.search.model.CharacterResultItem
 import com.star.wars.search.presentation.SearchEvent.SearchErrorEvent
 import com.star.wars.search.presentation.SearchEvent.SearchResultsFetched
 import dagger.hilt.android.AndroidEntryPoint
@@ -45,7 +46,7 @@ class SearchActivity : BaseActivity<SearchState>() {
             .addTo(compositeBag)
 
         screen.addSearchHandler(binding)
-        screen.addDeeplinkHandler(binding)
+        screen.setupComponentHandlers(binding)
         screen.initNavBar(binding, R.menu.menu_search)
 
         screen.event.observe(
@@ -62,10 +63,10 @@ class SearchActivity : BaseActivity<SearchState>() {
                         //TODO - add a clear logic on list
                     }
                     is SearchEvent.SearchTriggeredEvent -> vm.searchCharacter(event.searchText)
-                    is SearchEvent.DeepLinkFiredEvent -> {
+                    is SearchEvent.ClickFiredEvent -> {
                         Toast.makeText(
                             this,
-                            "Deeplink fired: ${event.deepLink}",
+                            "Deeplink fired: ${(event.extraPayload as CharacterResultItem).name}",
                             Toast.LENGTH_SHORT
                         ).show()
                     }

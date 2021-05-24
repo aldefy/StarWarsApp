@@ -6,6 +6,7 @@ import android.widget.LinearLayout
 import androidx.core.view.updateLayoutParams
 import com.airbnb.epoxy.*
 import com.star.wars.andromeda.R
+import com.star.wars.andromeda.extensions.ComponentClickHandler
 import com.star.wars.andromeda.extensions.clickable
 import com.star.wars.andromeda.extensions.dpToPixels
 import com.star.wars.andromeda.extensions.unclickable
@@ -23,7 +24,7 @@ abstract class LinearGroupComponent(models: List<EpoxyModel<*>>) :
     lateinit var viewGroupData: ViewGroupComponentData
 
     @EpoxyAttribute
-    var deepLinkHandler: (String) -> Unit = {}
+    var componentClickHandler: ComponentClickHandler = {}
 
     override fun bind(holder: ModelGroupHolder) {
         super.bind(holder)
@@ -63,10 +64,10 @@ abstract class LinearGroupComponent(models: List<EpoxyModel<*>>) :
                 isBaselineAligned = false
             }
 
-            if (viewGroupData.deepLink.isNotEmpty()) {
+            if (viewGroupData.isViewClickable()) {
                 clickable()
                 setOnClickListener {
-                    deepLinkHandler(viewGroupData.deepLink)
+                    componentClickHandler(viewGroupData.extraPayload!!)
                 }
             } else {
                 unclickable()

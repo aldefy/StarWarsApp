@@ -57,11 +57,16 @@ class SearchScreenImpl : SearchScreen {
         }
     }
 
-    fun addDeeplinkHandler(
+    fun setupComponentHandlers(
         binding: ActivitySearchBinding
     ) {
-        binding.contentRV.setDeepLinkHandler {
-            _event.value = SearchEvent.DeepLinkFiredEvent(it)
+        with(binding.contentRV){
+            setComponentClickHandler {
+                _event.value = SearchEvent.ClickFiredEvent(it)
+            }
+            setViewComponentNotDrawnHandler {
+                _event.value = SearchEvent.ComponentNotDrawnEvent(it)
+            }
         }
     }
 

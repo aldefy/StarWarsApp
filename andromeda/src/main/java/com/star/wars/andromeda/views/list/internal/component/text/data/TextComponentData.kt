@@ -1,5 +1,6 @@
 package com.star.wars.andromeda.views.list.internal.component.text.data
 
+import android.os.Parcelable
 import com.star.wars.andromeda.Color
 import com.star.wars.andromeda.views.list.ComponentDataWithClick
 import com.star.wars.andromeda.views.list.Gravity
@@ -17,9 +18,8 @@ data class TextComponentData(
     override val viewType: String = "text",
     override val paddingHorizontal: Int = 0,
     override val paddingVertical: Int = 0,
-    override val deepLink: String = "",
+    override val extraPayload: Parcelable?=null,
     var navigateToOnClick: String? = null,
-    val isClickable: Boolean = false,
     val text: String = "",
     val size: Float = 16.0f,
     val textStyle: TypographyStyle = TypographyStyle.TITLE_MODERATE_BOLD_DEFAULT,

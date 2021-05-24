@@ -8,13 +8,14 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.star.wars.andromeda.R
 import com.star.wars.andromeda.databinding.AndromedaLayoutListBinding
+import com.star.wars.andromeda.extensions.ComponentClickHandler
 import com.star.wars.andromeda.extensions.ViewComponentNotDrawnHandler
 import com.star.wars.andromeda.extensions.readAttributes
 
 class AndromedaListView @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null
 ) : FrameLayout(context, attrs) {
-    private var deepLinkHandler: (String) -> Unit = {}
+    private var componentClickHandler: ComponentClickHandler = {}
     private var viewComponentNotDrawnHandler: ViewComponentNotDrawnHandler = {}
 
     enum class Type {
@@ -24,8 +25,8 @@ class AndromedaListView @JvmOverloads constructor(
 
     private val controller: ComponentController by lazy {
         ComponentController(
-            deepLinkHandler = {
-                deepLinkHandler(it)
+            componentClickHandler = {
+                componentClickHandler(it)
             },
             uncaughtViewData = { data ->
                 viewComponentNotDrawnHandler(data)
@@ -54,8 +55,8 @@ class AndromedaListView @JvmOverloads constructor(
         controller.setData(components)
     }
 
-    fun setDeepLinkHandler(deepLinkHandler: (String) -> Unit) {
-        this.deepLinkHandler = deepLinkHandler
+    fun setComponentClickHandler(componentClickHandler: ComponentClickHandler) {
+        this.componentClickHandler = componentClickHandler
     }
 
     fun setViewComponentNotDrawnHandler(viewComponentNotDrawnHandler: ViewComponentNotDrawnHandler) {

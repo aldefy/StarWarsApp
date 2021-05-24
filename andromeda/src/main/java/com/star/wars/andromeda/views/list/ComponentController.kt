@@ -2,11 +2,12 @@ package com.star.wars.andromeda.views.list
 
 import com.airbnb.epoxy.TypedEpoxyController
 import com.airbnb.epoxy.stickyheader.StickyHeaderCallbacks
+import com.star.wars.andromeda.extensions.ComponentClickHandler
 import com.star.wars.andromeda.extensions.ViewComponentNotDrawnHandler
 import com.star.wars.andromeda.views.list.internal.generateModel
 
 class ComponentController(
-    val deepLinkHandler: (String) -> Unit,
+    val componentClickHandler: ComponentClickHandler,
     val uncaughtViewData: ViewComponentNotDrawnHandler
 ) : TypedEpoxyController<List<ComponentData>>(), StickyHeaderCallbacks {
 
@@ -14,8 +15,8 @@ class ComponentController(
         data.map { componentData ->
             generateModel(
                 data = componentData,
-                deepLinkHandler = { deepLink ->
-                    deepLinkHandler(deepLink)
+                componentClickHandler = { extra ->
+                    componentClickHandler(extra)
                 }, viewComponentNotDrawnHandler = { data ->
                     uncaughtViewData(data)
                 }

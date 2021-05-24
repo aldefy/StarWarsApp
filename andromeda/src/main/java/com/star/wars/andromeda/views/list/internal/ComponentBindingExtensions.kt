@@ -3,6 +3,7 @@ package com.star.wars.andromeda.views.list.internal
 import com.airbnb.epoxy.Carousel
 import com.airbnb.epoxy.CarouselModel_
 import com.airbnb.epoxy.EpoxyModel
+import com.star.wars.andromeda.extensions.ComponentClickHandler
 import com.star.wars.andromeda.extensions.ViewComponentNotDrawnHandler
 import com.star.wars.andromeda.extensions.dpToPixels
 import com.star.wars.andromeda.views.list.ComponentData
@@ -18,7 +19,7 @@ import com.star.wars.andromeda.views.list.internal.component.viewgroup.data.View
 
 fun generateModel(
     data: ComponentData,
-    deepLinkHandler: (String) -> Unit,
+    componentClickHandler: ComponentClickHandler,
     viewComponentNotDrawnHandler: ViewComponentNotDrawnHandler
 ): EpoxyModel<*> {
     return when (data) {
@@ -26,13 +27,13 @@ fun generateModel(
             TextComponent_()
                 .id(data.id)
                 .textComponentData(data)
-                .deepLinkHandler(deepLinkHandler)
+                .componentClickHandler(componentClickHandler)
         }
         is ViewGroupComponentData -> {
             val models = data.children.map { dj ->
                 generateModel(
                     data = dj,
-                    deepLinkHandler = deepLinkHandler,
+                    componentClickHandler = componentClickHandler,
                     viewComponentNotDrawnHandler = viewComponentNotDrawnHandler
                 )
             }
@@ -40,22 +41,22 @@ fun generateModel(
                 ViewGroupTypes.CARD -> CardGroupComponent_(models)
                     .id(data.id)
                     .viewGroup(data)
-                    .deepLinkHandler(deepLinkHandler)
+                    .componentClickHandler(componentClickHandler)
                 ViewGroupTypes.LINEAR -> LinearGroupComponent_(models)
                     .id(data.id)
                     .viewGroupData(data)
-                    .deepLinkHandler(deepLinkHandler)
+                    .componentClickHandler(componentClickHandler)
                 ViewGroupTypes.GRID -> GridComponent_()
                     .id(data.id)
                     .gridComponentData(data)
-                    .deepLinkHandler(deepLinkHandler)
+                    .componentClickHandler(componentClickHandler)
             }
         }
         is CarouselComponentData -> {
             val children = data.children.map { dj ->
                 generateModel(
                     data = dj,
-                    deepLinkHandler = deepLinkHandler,
+                    componentClickHandler = componentClickHandler,
                     viewComponentNotDrawnHandler = viewComponentNotDrawnHandler
                 )
             }
@@ -74,7 +75,7 @@ fun generateModel(
         }
         else -> {
             EmptyComponent_().id(data.id).also {
-                viewComponentNotDrawnHandler(data)
+                viewComponentNotDrawnHandler(data.id)
             }
         }
     }

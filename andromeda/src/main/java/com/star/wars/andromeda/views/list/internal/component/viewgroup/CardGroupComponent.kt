@@ -7,6 +7,7 @@ import android.widget.LinearLayout
 import androidx.cardview.widget.CardView
 import com.airbnb.epoxy.*
 import com.star.wars.andromeda.R
+import com.star.wars.andromeda.extensions.ComponentClickHandler
 import com.star.wars.andromeda.extensions.clickable
 import com.star.wars.andromeda.extensions.dpToPixels
 import com.star.wars.andromeda.extensions.unclickable
@@ -25,7 +26,7 @@ abstract class CardGroupComponent(models: List<EpoxyModel<*>>) :
     lateinit var viewGroup: ViewGroupComponentData
 
     @EpoxyAttribute
-    var deepLinkHandler: (String) -> Unit = {}
+    var componentClickHandler: ComponentClickHandler = {}
 
     override fun bind(holder: ModelGroupHolder) {
         super.bind(holder)
@@ -40,7 +41,7 @@ abstract class CardGroupComponent(models: List<EpoxyModel<*>>) :
             if (viewGroup.isViewClickable()) {
                 clickable()
                 setOnClickListener {
-                    deepLinkHandler(viewGroup.deepLink)
+                    componentClickHandler(viewGroup.extraPayload!!)
                 }
             } else {
                 unclickable()

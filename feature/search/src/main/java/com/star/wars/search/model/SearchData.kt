@@ -1,7 +1,9 @@
 package com.star.wars.search.model
 
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.parcelize.Parcelize
 
 data class SearchPeopleResponse(
     @SerializedName("count")
@@ -10,6 +12,7 @@ data class SearchPeopleResponse(
     val results: List<CharacterResultItem>
 )
 
+@Parcelize
 data class CharacterResultItem(
     @SerializedName("films")
     val films: List<String>?,
@@ -41,6 +44,6 @@ data class CharacterResultItem(
     val name: String = "",
     @SerializedName("height")
     val height: String = ""
-)
+): Parcelable
 
 
