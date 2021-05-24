@@ -4,20 +4,18 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import android.widget.Toast
+import android.os.Parcelable
 import androidx.activity.viewModels
 import com.star.wars.andromeda.AndromedaTheme
 import com.star.wars.andromeda.theme.getTheme
 import com.star.wars.andromeda.theme.setTheme
 import com.star.wars.common.addTo
 import com.star.wars.common.base.BaseActivity
-import com.star.wars.common.data.CharacterDetailsMeta
 import com.star.wars.common.viewBinding
 import com.star.wars.search.R
 import com.star.wars.search.databinding.ActivitySearchBinding
 import com.star.wars.search.domain.SearchState
 import com.star.wars.search.domain.SearchViewModel
-import com.star.wars.search.model.CharacterResultItem
 import com.star.wars.search.presentation.SearchEvent.SearchErrorEvent
 import com.star.wars.search.presentation.SearchEvent.SearchResultsFetched
 import dagger.hilt.android.AndroidEntryPoint
@@ -37,8 +35,7 @@ class SearchActivity : BaseActivity<SearchState>() {
     }
 
     private fun setUpHandlers() {
-        vm.state.observe(
-            this,
+        vm.state.observe(this,
             {
                 it?.let {
                     _state.onNext(it)
@@ -67,13 +64,7 @@ class SearchActivity : BaseActivity<SearchState>() {
                     }
                     is SearchEvent.SearchTriggeredEvent -> vm.searchCharacter(event.searchText)
                     is SearchEvent.ClickFiredEvent -> {
-                        val intent = Intent()
-                        intent.action = "starwars://details"
-                        intent.putExtra(
-                            "details_meta",
-                            event.extraPayload
-                        )
-                        startActivity(intent)
+                        navigateToDetails(event.extraPayload)
                     }
                     is SearchEvent.CloseScreen -> {
                         finish()
@@ -84,6 +75,18 @@ class SearchActivity : BaseActivity<SearchState>() {
                 }
             }
         )
+    }
+
+    private fun navigateToDetails(extraPayload: Parcelable) {
+        val intent = Intent()
+        intent.action = "starwars://details"
+        intent.putExtra(
+            "details_meta",
+            extraPayload
+        )
+        if (intent.resolveActivity(packageManager) != null) {
+            startActivity(intent)
+        }
     }
 
     private fun toggleTheme() {
