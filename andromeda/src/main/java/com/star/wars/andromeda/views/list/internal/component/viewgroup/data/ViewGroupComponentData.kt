@@ -1,5 +1,6 @@
 package com.star.wars.andromeda.views.list.internal.component.viewgroup.data
 
+import android.os.Parcelable
 import com.star.wars.andromeda.Color
 import com.star.wars.andromeda.views.list.*
 import kotlinx.parcelize.Parcelize
@@ -13,7 +14,7 @@ data class ViewGroupComponentData(
     override val viewType: String = "viewgroup",
     override val paddingHorizontal: Int = 0,
     override val paddingVertical: Int = 0,
-    override val deepLink: String = "",
+    override val extraPayload: Parcelable? = null,
     val children: MutableList<out ComponentData> = mutableListOf(),
     val type: ViewGroupTypes = ViewGroupTypes.LINEAR,
     val background: Color = Color.TRANSPARENT,
@@ -22,5 +23,5 @@ data class ViewGroupComponentData(
     val marginsHorizontal: Int = 0,
     val marginsVertical: Int = 0,
     val cardElevation: Float? = 4.0f,
-    val spanCount: Int = 3
+    val spanCount: Int = 3,
 ) : ComponentDataWithClick
