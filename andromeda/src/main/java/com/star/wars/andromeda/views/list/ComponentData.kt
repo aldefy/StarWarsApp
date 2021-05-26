@@ -2,8 +2,11 @@ package com.star.wars.andromeda.views.list
 
 import android.os.Parcelable
 
-interface ComponentData : Parcelable {
+interface BaseComponentData: Parcelable {
     val id: String
+}
+
+interface ComponentData : BaseComponentData {
     val width: Width
     val height: Height
     val viewType: String

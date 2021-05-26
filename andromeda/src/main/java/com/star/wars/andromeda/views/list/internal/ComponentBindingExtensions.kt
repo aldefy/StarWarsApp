@@ -6,9 +6,10 @@ import com.airbnb.epoxy.EpoxyModel
 import com.star.wars.andromeda.extensions.ComponentClickHandler
 import com.star.wars.andromeda.extensions.ViewComponentNotDrawnHandler
 import com.star.wars.andromeda.extensions.dpToPixels
-import com.star.wars.andromeda.views.list.ComponentData
+import com.star.wars.andromeda.views.list.BaseComponentData
 import com.star.wars.andromeda.views.list.internal.component.carousel.data.CarouselComponentData
 import com.star.wars.andromeda.views.list.internal.component.empty.EmptyComponent_
+import com.star.wars.andromeda.views.list.internal.component.empty.data.EmptyComponentData
 import com.star.wars.andromeda.views.list.internal.component.text.TextComponent_
 import com.star.wars.andromeda.views.list.internal.component.text.data.TextComponentData
 import com.star.wars.andromeda.views.list.internal.component.viewgroup.CardGroupComponent_
@@ -18,7 +19,7 @@ import com.star.wars.andromeda.views.list.internal.component.viewgroup.data.View
 import com.star.wars.andromeda.views.list.internal.component.viewgroup.data.ViewGroupTypes
 
 fun generateModel(
-    data: ComponentData,
+    data: BaseComponentData,
     componentClickHandler: ComponentClickHandler,
     viewComponentNotDrawnHandler: ViewComponentNotDrawnHandler
 ): EpoxyModel<*> {
@@ -73,10 +74,23 @@ fun generateModel(
                 )
                 .models(children)
         }
+        is EmptyComponentData -> {
+            generateEmptyComponent(data, viewComponentNotDrawnHandler)
+        }
         else -> {
-            EmptyComponent_().id(data.id).also {
-                viewComponentNotDrawnHandler(data.id)
-            }
+            generateEmptyComponent(data, viewComponentNotDrawnHandler)
         }
     }
+}
+
+private fun generateEmptyComponent(
+    data: BaseComponentData,
+    viewComponentNotDrawnHandler: ViewComponentNotDrawnHandler
+): EpoxyModel<*> {
+    return EmptyComponent_()
+        .id(data.id)
+        .emptyComponentData(data)
+        .also {
+            viewComponentNotDrawnHandler(data.id)
+        }
 }

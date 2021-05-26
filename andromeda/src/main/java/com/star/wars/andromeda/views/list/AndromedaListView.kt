@@ -51,7 +51,7 @@ class AndromedaListView @JvmOverloads constructor(
         }
     }
 
-    fun setUpComponents(components: List<ComponentData>) {
+    fun setUpComponents(components: List<BaseComponentData>) {
         controller.setData(components)
     }
 

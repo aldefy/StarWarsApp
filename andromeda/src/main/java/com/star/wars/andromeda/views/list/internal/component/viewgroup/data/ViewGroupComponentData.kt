@@ -15,7 +15,7 @@ data class ViewGroupComponentData(
     override val paddingHorizontal: Int = 0,
     override val paddingVertical: Int = 0,
     override val extraPayload: Parcelable? = null,
-    val children: MutableList<out ComponentData> = mutableListOf(),
+    val children: MutableList<out BaseComponentData> = mutableListOf(),
     val type: ViewGroupTypes = ViewGroupTypes.LINEAR,
     val background: Color = Color.TRANSPARENT,
     val radius: Float = 4f,

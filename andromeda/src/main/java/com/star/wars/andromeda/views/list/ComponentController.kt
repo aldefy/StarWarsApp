@@ -9,9 +9,9 @@ import com.star.wars.andromeda.views.list.internal.generateModel
 class ComponentController(
     val componentClickHandler: ComponentClickHandler,
     val uncaughtViewData: ViewComponentNotDrawnHandler
-) : TypedEpoxyController<List<ComponentData>>(), StickyHeaderCallbacks {
+) : TypedEpoxyController<List<BaseComponentData>>(), StickyHeaderCallbacks {
 
-    override fun buildModels(data: List<ComponentData>) {
+    override fun buildModels(data: List<BaseComponentData>) {
         data.map { componentData ->
             generateModel(
                 data = componentData,

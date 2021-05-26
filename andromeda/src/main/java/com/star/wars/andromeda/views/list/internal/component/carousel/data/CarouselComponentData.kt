@@ -1,10 +1,7 @@
 package com.star.wars.andromeda.views.list.internal.component.carousel.data
 
 import android.os.Parcelable
-import com.star.wars.andromeda.views.list.ComponentData
-import com.star.wars.andromeda.views.list.Gravity
-import com.star.wars.andromeda.views.list.Height
-import com.star.wars.andromeda.views.list.Width
+import com.star.wars.andromeda.views.list.*
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
@@ -17,5 +14,5 @@ data class CarouselComponentData(
     override val paddingHorizontal: Int = 0,
     override val paddingVertical: Int = 0,
     override val extraPayload: Parcelable? = null,
-    val children: List<ComponentData> = emptyList()
+    val children: List<BaseComponentData> = emptyList()
 ) : ComponentData

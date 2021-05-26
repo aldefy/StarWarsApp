@@ -4,6 +4,7 @@ import com.star.wars.andromeda.views.list.ComponentData
 import com.star.wars.andromeda.views.list.Gravity
 import com.star.wars.andromeda.views.list.Width
 import com.star.wars.andromeda.views.list.internal.component.carousel.data.CarouselComponentData
+import com.star.wars.andromeda.views.list.internal.component.empty.data.EmptyComponentData
 import com.star.wars.andromeda.views.list.internal.component.text.data.TextComponentData
 import com.star.wars.andromeda.views.list.internal.component.viewgroup.data.Orientation
 import com.star.wars.andromeda.views.list.internal.component.viewgroup.data.ViewGroupComponentData
@@ -70,7 +71,7 @@ class DetailsFetchCharacterTransformerImpl @Inject constructor() :
         )
         val element2 = ViewGroupComponentData(
             id = "species",
-            children = mutableListOf(),
+            children = mutableListOf(EmptyComponentData("emptyvg")),
             width = Width.FILL,
             marginsHorizontal = 16,
             marginsVertical = 8,
@@ -83,7 +84,7 @@ class DetailsFetchCharacterTransformerImpl @Inject constructor() :
         )
         val element3 = ViewGroupComponentData(
             id = "planets",
-            children = mutableListOf(),
+            children = mutableListOf(EmptyComponentData("emptyvg")),
             width = Width.FILL,
             marginsHorizontal = 16,
             marginsVertical = 8,
@@ -96,7 +97,7 @@ class DetailsFetchCharacterTransformerImpl @Inject constructor() :
         )
         val element4 = CarouselComponentData(
             id = "films",
-            children = mutableListOf(),
+            children = mutableListOf(EmptyComponentData("emptyc")),
             width = Width.FILL,
             paddingHorizontal = 8,
         )
