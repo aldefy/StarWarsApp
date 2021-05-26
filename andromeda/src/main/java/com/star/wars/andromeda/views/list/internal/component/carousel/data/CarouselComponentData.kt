@@ -14,5 +14,5 @@ data class CarouselComponentData(
     override val paddingHorizontal: Int = 0,
     override val paddingVertical: Int = 0,
     override val extraPayload: Parcelable? = null,
-    val children: List<BaseComponentData> = emptyList()
+    val children: MutableList<BaseComponentData> = mutableListOf()
 ) : ComponentData
