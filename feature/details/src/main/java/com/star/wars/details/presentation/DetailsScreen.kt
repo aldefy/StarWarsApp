@@ -7,7 +7,9 @@ import androidx.lifecycle.MutableLiveData
 import com.star.wars.andromeda.extensions.makeGone
 import com.star.wars.andromeda.extensions.makeVisible
 import com.star.wars.andromeda.views.assets.icon.Icon
-import com.star.wars.andromeda.views.list.ComponentData
+import com.star.wars.andromeda.views.list.BaseComponentData
+import com.star.wars.andromeda.views.list.internal.component.carousel.data.CarouselComponentData
+import com.star.wars.andromeda.views.list.internal.component.viewgroup.data.ViewGroupComponentData
 import com.star.wars.andromeda.views.navbar.AndromedaNavBar
 import com.star.wars.common.addTo
 import com.star.wars.details.R
@@ -30,7 +32,7 @@ interface DetailsScreen : LifecycleObserver {
 class DetailsScreenImpl : DetailsScreen {
     private val _event = MutableLiveData<DetailsEvent>()
     override val event: LiveData<DetailsEvent> = _event
-    private val listOfComponentData = arrayListOf<ComponentData>()
+    private val listOfComponentData = arrayListOf<BaseComponentData>()
 
     override fun bind(
         binding: ActivityDetailsBinding,
@@ -74,7 +76,7 @@ class DetailsScreenImpl : DetailsScreen {
             .ofType(DetailsState.UpdateCharacterDetails::class.java)
             .subscribe {
                 listOfComponentData.addAll(it.data)
-                /*with(it.data.extraPayload as CharacterDetailsResponse) {
+                with((it.data[1] as ViewGroupComponentData).extraPayload as CharacterDetailsResponse) {
                     films?.let { urls ->
                         _event.value = DetailsEvent.FetchFilmsEvent(urls)
                     }
@@ -83,7 +85,34 @@ class DetailsScreenImpl : DetailsScreen {
                     }
 
                     _event.value = DetailsEvent.FetchPlanetEvent(homeworld)
-                }*/
+                }
+                binding.contentRV.setUpComponents(listOfComponentData)
+            }
+            .addTo(bag)
+
+        observable
+            .ofType(DetailsState.UpdateFilmsDetails::class.java)
+            .subscribe {
+                val component = listOfComponentData[7] as CarouselComponentData
+                component.children.addAll(it.data)
+                binding.contentRV.setUpComponents(listOfComponentData)
+            }
+            .addTo(bag)
+
+        observable
+            .ofType(DetailsState.UpdateSpeciesDetails::class.java)
+            .subscribe {
+                val component = listOfComponentData[3] as ViewGroupComponentData
+                component.children.addAll(it.data)
+                binding.contentRV.setUpComponents(listOfComponentData)
+            }
+            .addTo(bag)
+
+        observable
+            .ofType(DetailsState.UpdatePlanetDetails::class.java)
+            .subscribe {
+                val component = listOfComponentData[5] as ViewGroupComponentData
+                component.children.addAll(it.data)
                 binding.contentRV.setUpComponents(listOfComponentData)
             }
             .addTo(bag)
