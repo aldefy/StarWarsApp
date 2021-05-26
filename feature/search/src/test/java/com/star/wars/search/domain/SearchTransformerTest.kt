@@ -43,7 +43,7 @@ class SearchTransformerTest : BaseJUnitTest() {
     }
 
     @Test
-    fun `given list of CharacterResult then verify return list of ComponentData`() {
+    fun `given list of CharacterResult then verify return list of ComponentData contains ViewGroup`() {
         val resultItems = listOf(CharacterResultItem())
         val transformedResult = transformer.results(
             resultItems
