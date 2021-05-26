@@ -10,6 +10,7 @@ import com.star.wars.andromeda.views.list.internal.component.viewgroup.data.Orie
 import com.star.wars.andromeda.views.list.internal.component.viewgroup.data.ViewGroupComponentData
 import com.star.wars.andromeda.views.list.internal.component.viewgroup.data.ViewGroupTypes
 import com.star.wars.andromeda.views.text.TypographyStyle
+import com.star.wars.common.cmToFeetConverter
 import com.star.wars.details.model.CharacterDetailsResponse
 import javax.inject.Inject
 
@@ -48,7 +49,11 @@ class DetailsFetchCharacterTransformerImpl @Inject constructor() :
                         ),
                         TextComponentData(
                             id = "characterBirthYear-$id",
-                            text = String.format(HeightFormat, result.height, result.height),
+                            text = String.format(
+                                HeightFormat,
+                                result.height,
+                                result.height.cmToFeetConverter()
+                            ),
                             textStyle = TypographyStyle.BODY_MODERATE_DEFAULT,
                             gravity = Gravity.START
                         )
