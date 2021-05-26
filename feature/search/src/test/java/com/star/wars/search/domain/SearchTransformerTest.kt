@@ -1,8 +1,10 @@
 package com.star.wars.search.domain
 
+import com.star.wars.andromeda.views.list.ComponentData
 import com.star.wars.andromeda.views.list.internal.component.viewgroup.data.ViewGroupComponentData
 import com.star.wars.common.test.BaseJUnitTest
 import com.star.wars.search.model.CharacterResultItem
+import com.star.wars.search.model.SearchEmptyError
 import org.junit.Assert.assertTrue
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -31,15 +33,10 @@ class SearchTransformerTest : BaseJUnitTest() {
         )
     }
 
-    @Test
+    @Test(expected = SearchEmptyError::class)
     fun `given empty list of CharacterResult then return empty list of ComponentData`() {
         val resultItems = listOf<CharacterResultItem>()
-        val transformedResult = transformer.results(
-            resultItems
-        )
-        assertTrue(
-            transformedResult.isEmpty()
-        )
+        transformer.results(resultItems)
     }
 
     @Test
