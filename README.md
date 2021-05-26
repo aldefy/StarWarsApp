@@ -66,7 +66,34 @@ The following attributes are displayed for the character details:
 * [RxJava2](https://github.com/ReactiveX/RxJava)
 * [MVVM](https://bit.ly/2GmZICu)
 
+### Architecture
+
 ![Arch](snaps/arch.png)
+
+#### Keywords
+* Screen - Represents a layer to react to State presented by domain layer for UI to show or update UI elements
+* State - State representation of a finite system based on business logic
+* Event - Event representation for UI layer to react to in a finite approach.
+
+## Decision log
+* Multi modular architecture and feature module driven architecture
+* Choose navigation components to show that we don't need a single fragment however reuse a Custom view if needed as a destination
+* Breaking down core deps and structuring a scalable but highly adaptable modular code base.
+* Adds a design system module to help with showcasing theming support as well Epoxy driven UI layer where needed
+* Showcasing design principles by breaking down core requirements for building the aforementioned design layer.
+* Writing BaseJunit test to ensure all tests followed same coding standards.
+* Did not have time to invest into UI testing
+* Use of Clean architecture helped ensure SOC for each feature and testability
+* Core/Common Classes - could not cover any test coverage in these modules for now
+* Built custom architecture to break down into unit components in each layer
+* Ensured packaging for readability.
+* 📝 Despite writing tests at the end - did not follow TDD per say , chose this path for a reason - architecture shown in this app has been used by my team for some time now and that allowed control over components to verify at the end
+* Due to bad time crunch over week days , asked for an extension Day to ensure i delivered with satisfaction of completing all checkboxes i had set forth to complete in this submission.
+* Added a error view at the end to first solve core challenges and tackle UI towards end.
+* Ensured wrote granular commits to help understand thought-process from get-go.
+
+<img src="snaps/git_logs.png" alt="Git Logs" width="300" height="300">
+
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -114,11 +141,24 @@ See the [open issues](/Issues.md) for a list of proposed features (and known iss
     * [Gradle Grovy DSL](https://docs.gradle.org/current/userguide/kotlin_dsl.html) - For reference purposes, here's an [article explaining the migration](https://medium.com/@evanschepsiror/migrating-to-kotlin-dsl-4ee0d6d5c977).
     * Plugins 
         * [Json To Kotlin Data Class](https://github.com/Mighty16/JSONToKotlinClass) - Plugin generates Kotlin data classes from JSON text.
-    
+
+## Design Patterns
+* [SOLID](https://en.wikipedia.org/wiki/SOLID) - SOLID principle
+* [Design Principles](https://refactoring.guru/design-patterns) - Mostly Builder pattern
     
 ## Dependencies
 
 All the dependencies (external libraries) are defined in the single place - Gradle [dependencies.gradle](dependencies.gradle) folder. This approach allows to easily manage dependencies and use the same dependency version across all modules. 
+
+## Tests
+Details
+
+<img src="snaps/details-unit-test.png" width="400">
+
+Search
+
+<img src="snaps/search-unit-test.png" width="400">
+
 
 ## Some notable mentions for Code review
 
@@ -147,7 +187,6 @@ Contributions are what make the open source community such an amazing place to b
 ## License
 
 Distributed under the Apache License 2.0 License. See `LICENSE` for more information.
-
 
 
 <!-- CONTACT -->
