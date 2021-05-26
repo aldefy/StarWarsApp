@@ -3,6 +3,7 @@ package com.star.wars.search.model
 
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import com.star.wars.common.HttpUrl
 import kotlinx.parcelize.Parcelize
 
 data class SearchPeopleResponse(
@@ -31,7 +32,7 @@ data class CharacterResultItem(
     @SerializedName("vehicles")
     val vehicles: List<String>?,
     @SerializedName("url")
-    val url: String = "",
+    var url: HttpUrl = "",
     @SerializedName("hair_color")
     val hairColor: String = "",
     @SerializedName("birth_year")

@@ -18,5 +18,4 @@ abstract class SearchModule {
 
     @Binds
     abstract fun useCase(impl: SearchInteractor): SearchUseCase
-
 }

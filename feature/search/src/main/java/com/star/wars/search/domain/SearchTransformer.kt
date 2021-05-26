@@ -8,22 +8,32 @@ import com.star.wars.andromeda.views.list.internal.component.viewgroup.data.Orie
 import com.star.wars.andromeda.views.list.internal.component.viewgroup.data.ViewGroupComponentData
 import com.star.wars.andromeda.views.list.internal.component.viewgroup.data.ViewGroupTypes
 import com.star.wars.andromeda.views.text.TypographyStyle
+import com.star.wars.common.addHttps
 import com.star.wars.search.model.CharacterResultItem
 import javax.inject.Inject
 
 interface SearchTransformer {
     fun results(resultItems: List<CharacterResultItem>): List<ComponentData>
+    fun toHttpUrl(resultItems: List<CharacterResultItem>): List<CharacterResultItem>
 }
 
 class SearchTransformerImpl @Inject constructor() : SearchTransformer {
     override fun results(resultItems: List<CharacterResultItem>): List<ComponentData> {
-        return resultItems.map {
-            toComponentData(characterResultItem = it)
+        return resultItems
+            .map {
+                toComponentData(result = it)
+            }
+    }
+
+    override fun toHttpUrl(resultItems: List<CharacterResultItem>): List<CharacterResultItem> {
+        return resultItems.map { resultItem ->
+            resultItem.url = resultItem.url.addHttps()
+            resultItem
         }
     }
 
-    private fun toComponentData(characterResultItem: CharacterResultItem): ComponentData {
-        val id = characterResultItem.url
+    private fun toComponentData(result: CharacterResultItem): ComponentData {
+        val id = result.url
         return ViewGroupComponentData(
             id = id,
             children = mutableListOf(
@@ -32,13 +42,13 @@ class SearchTransformerImpl @Inject constructor() : SearchTransformer {
                     children = mutableListOf(
                         TextComponentData(
                             id = "characterTitle--$id",
-                            text = characterResultItem.name,
+                            text = result.name,
                             textStyle = TypographyStyle.TITLE_MODERATE_DEMI_DEFAULT,
                             gravity = Gravity.START
                         ),
                         TextComponentData(
                             id = "characterBirthYear-$id",
-                            text = characterResultItem.birthYear,
+                            text = result.birthYear,
                             textStyle = TypographyStyle.BODY_MODERATE_DEFAULT,
                             gravity = Gravity.START
                         )
@@ -53,7 +63,7 @@ class SearchTransformerImpl @Inject constructor() : SearchTransformer {
             marginsHorizontal = 16,
             marginsVertical = 8,
             type = ViewGroupTypes.CARD,
-            extraPayload = characterResultItem
+            extraPayload = result
         )
     }
 

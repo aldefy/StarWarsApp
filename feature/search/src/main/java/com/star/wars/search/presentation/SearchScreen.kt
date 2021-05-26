@@ -68,7 +68,7 @@ class SearchScreenImpl : SearchScreen {
                 if (it is CharacterResultItem) {
                     val meta = CharacterDetailsMeta(
                         it.name,
-                        listOf(it.url)
+                        it.url
                     )
                     Timber.tag("Search").d("Clicked : $meta")
                     _event.value = SearchEvent.ClickFiredEvent(meta)
