@@ -1,32 +1,43 @@
 package com.star.wars.details.domain
 
-import com.star.wars.details.model.DetailsApi
+import com.star.wars.common.HttpUrl
+import com.star.wars.details.model.*
+import io.reactivex.Observable
 import io.reactivex.Single
+import io.reactivex.schedulers.Schedulers
 import javax.inject.Inject
 
 interface DetailsRepository {
-    fun fetchCharacterDetail(urlToLoad: String): Single<Any>
-    fun fetchPlanet(urlToLoad: String): Single<Any>
-    fun fetchSpecies(urlToLoad: String): Single<Any>
-    fun fetchFilms(urlToLoad: String): Single<Any>
+    fun fetchCharacterDetail(urlToLoad: HttpUrl): Single<CharacterDetailsResponse>
+    fun fetchPlanet(urlToLoad: HttpUrl): Single<PlanetsResponse>
+    fun fetchSpecies(urls: List<HttpUrl>): Single<DetailsSpeciesCombinedResult>
+    fun fetchFilms(urls: List<HttpUrl>): Single<DetailsFilmsCombinedResult>
 }
 
 class DetailsRepositoryImpl @Inject constructor(
     private val api: DetailsApi
 ) : DetailsRepository {
-    override fun fetchCharacterDetail(urlToLoad: String): Single<Any> {
+    override fun fetchCharacterDetail(urlToLoad: HttpUrl): Single<CharacterDetailsResponse> {
         return api.fetchCharacterDetails(urlToLoad)
     }
 
-    override fun fetchPlanet(urlToLoad: String): Single<Any> {
+    override fun fetchPlanet(urlToLoad: HttpUrl): Single<PlanetsResponse> {
         return api.fetchPlanet(urlToLoad)
     }
 
-    override fun fetchSpecies(urlToLoad: String): Single<Any> {
-        return api.fetchSpecies(urlToLoad)
+    override fun fetchSpecies(urls: List<HttpUrl>): Single<DetailsSpeciesCombinedResult> {
+        TODO()
     }
 
-    override fun fetchFilms(urlToLoad: String): Single<Any> {
-        return api.fetchFilms(urlToLoad)
+    override fun fetchFilms(urls: List<HttpUrl>): Single<DetailsFilmsCombinedResult> {
+        return Observable.fromIterable(urls)
+            .flatMapSingle {
+                api.fetchFilm(it)
+                    .subscribeOn(Schedulers.io())
+            }
+            .toList()
+            .map {
+                DetailsFilmsCombinedResult(it)
+            }
     }
 }

@@ -14,8 +14,26 @@ abstract class DetailsModule {
     abstract fun repo(impl: DetailsRepositoryImpl): DetailsRepository
 
     @Binds
-    abstract fun transformer(impl: DetailsTransformerImpl): DetailsTransformer
+    abstract fun characterDetailsTransformer(impl: DetailsFetchCharacterTransformerImpl): DetailsFetchCharacterTransformer
 
     @Binds
-    abstract fun useCase(impl: DetailsInteractor): DetailsUseCase
+    abstract fun filmsDetailsTransformer(impl: DetailsFetchFilmsTransformerImpl): DetailsFetchFilmsTransformer
+
+    @Binds
+    abstract fun speciesDetailsTransformer(impl: DetailsFetchSpeciesTransformerImpl): DetailsFetchSpeciesTransformer
+
+    @Binds
+    abstract fun planetDetailsTransformer(impl: DetailsFetchPlanetTransformerImpl): DetailsFetchPlanetTransformer
+
+    @Binds
+    abstract fun fetchCharacterUseCase(impl: DetailsFetchCharacterInteractor): DetailsFetchCharacterUseCase
+
+    @Binds
+    abstract fun fetchFilmsUseCase(impl: DetailsFetchFilmsInteractor): DetailsFetchFilmsUseCase
+
+    @Binds
+    abstract fun fetchSpeciesUseCase(impl: DetailsFetchSpeciesInteractor): DetailsFetchSpeciesUseCase
+
+    @Binds
+    abstract fun fetchPlanetUseCase(impl: DetailsFetchPlanetInteractor): DetailsFetchPlanetUseCase
 }

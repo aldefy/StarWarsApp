@@ -6,14 +6,14 @@ import retrofit2.http.Url
 
 interface DetailsApi {
     @GET
-    fun fetchCharacterDetails(@Url characterUrl: String): Single<Any>
+    fun fetchCharacterDetails(@Url characterUrl: String): Single<CharacterDetailsResponse>
 
     @GET
-    fun fetchPlanet(@Url planetUrl: String): Single<Any>
+    fun fetchPlanet(@Url planetUrl: String): Single<PlanetsResponse>
 
     @GET
-    fun fetchSpecies(@Url speciesUrl: String): Single<Any>
+    fun fetchSpecie(@Url specieUrl: String): Single<SpeciesResponse>
 
     @GET
-    fun fetchFilms(@Url filmsUrl: String): Single<Any>
+    fun fetchFilm(@Url filmUrl: String): Single<FilmsResponse>
 }

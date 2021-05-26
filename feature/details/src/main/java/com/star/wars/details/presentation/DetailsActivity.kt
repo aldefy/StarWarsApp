@@ -31,13 +31,14 @@ class DetailsActivity : BaseActivity<DetailsState>() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
-        handleExtras()
+        startDetailsFlow()
     }
 
-    private fun handleExtras() {
+    private fun startDetailsFlow() {
         meta = intent.getParcelableExtra(EXTRA_META)
         requireNotNull(meta) { "no $EXTRA_META provided in Intent extras" }
         setUpHandlers()
+        vm.fetchDetails(meta!!.url)
     }
 
     private fun setUpHandlers() {
@@ -68,6 +69,9 @@ class DetailsActivity : BaseActivity<DetailsState>() {
                     DetailsEvent.ShowThemeChooserEvent -> {
                         toggleTheme()
                     }
+                    is DetailsEvent.FetchFilmsEvent -> vm.fetchFilms(event.urls)
+                    is DetailsEvent.FetchPlanetEvent -> vm.fetchPlanet(event.url)
+                    is DetailsEvent.FetchSpeciesEvent -> vm.fetchSpecies(event.urls)
                 }
             }
         )

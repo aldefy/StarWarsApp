@@ -7,11 +7,13 @@ import androidx.lifecycle.MutableLiveData
 import com.star.wars.andromeda.extensions.makeGone
 import com.star.wars.andromeda.extensions.makeVisible
 import com.star.wars.andromeda.views.assets.icon.Icon
+import com.star.wars.andromeda.views.list.ComponentData
 import com.star.wars.andromeda.views.navbar.AndromedaNavBar
 import com.star.wars.common.addTo
 import com.star.wars.details.R
 import com.star.wars.details.databinding.ActivityDetailsBinding
 import com.star.wars.details.domain.DetailsState
+import com.star.wars.details.model.CharacterDetailsResponse
 import io.reactivex.Observable
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.disposables.Disposable
@@ -28,6 +30,7 @@ interface DetailsScreen : LifecycleObserver {
 class DetailsScreenImpl : DetailsScreen {
     private val _event = MutableLiveData<DetailsEvent>()
     override val event: LiveData<DetailsEvent> = _event
+    private val listOfComponentData = arrayListOf<ComponentData>()
 
     override fun bind(
         binding: ActivityDetailsBinding,
@@ -42,7 +45,7 @@ class DetailsScreenImpl : DetailsScreen {
 
     fun initNavBar(
         binding: ActivityDetailsBinding,
-        title:String,
+        title: String,
         @MenuRes menu: Int
     ) {
         with(binding.navBarLayout.navBar) {
@@ -67,7 +70,23 @@ class DetailsScreenImpl : DetailsScreen {
         observable: Observable<DetailsState>,
         bag: CompositeDisposable
     ) {
+        observable
+            .ofType(DetailsState.UpdateCharacterDetails::class.java)
+            .subscribe {
+                listOfComponentData.addAll(it.data)
+                /*with(it.data.extraPayload as CharacterDetailsResponse) {
+                    films?.let { urls ->
+                        _event.value = DetailsEvent.FetchFilmsEvent(urls)
+                    }
+                    species?.let { urls ->
+                        _event.value = DetailsEvent.FetchSpeciesEvent(urls)
+                    }
 
+                    _event.value = DetailsEvent.FetchPlanetEvent(homeworld)
+                }*/
+                binding.contentRV.setUpComponents(listOfComponentData)
+            }
+            .addTo(bag)
     }
 
     private fun handleLoading(
