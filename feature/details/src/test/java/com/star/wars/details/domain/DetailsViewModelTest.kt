@@ -27,7 +27,7 @@ class DetailsViewModelTest : BaseJUnitTest() {
     private val observer: Observer<DetailsState> = mock()
 
     private val testUrl: HttpUrl = "test"
-    private val urlsCombined: List<HttpUrl> = emptyList()
+    private val urlsCombined: List<HttpUrl> = listOf(testUrl)
     private val successComponentList =
         mutableListOf<ComponentData>(TextComponentData(id = "testId"))
     private val emptyComponentList = mutableListOf<ComponentData>()
