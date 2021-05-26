@@ -16,7 +16,7 @@ data class SearchPeopleResponse(
 @Parcelize
 data class CharacterResultItem(
     @SerializedName("films")
-    val films: List<String>?,
+    val films: List<String>? = null,
     @SerializedName("homeworld")
     val homeworld: String = "",
     @SerializedName("gender")
@@ -30,7 +30,7 @@ data class CharacterResultItem(
     @SerializedName("mass")
     val mass: String = "",
     @SerializedName("vehicles")
-    val vehicles: List<String>?,
+    val vehicles: List<String>? = null,
     @SerializedName("url")
     var url: HttpUrl = "",
     @SerializedName("hair_color")
@@ -40,7 +40,7 @@ data class CharacterResultItem(
     @SerializedName("eye_color")
     val eyeColor: String = "",
     @SerializedName("starships")
-    val starships: List<String>?,
+    val starships: List<String>? = null,
     @SerializedName("name")
     val name: String = "",
     @SerializedName("height")

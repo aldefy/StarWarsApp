@@ -8,7 +8,6 @@ import com.star.wars.andromeda.views.list.internal.component.viewgroup.data.Orie
 import com.star.wars.andromeda.views.list.internal.component.viewgroup.data.ViewGroupComponentData
 import com.star.wars.andromeda.views.list.internal.component.viewgroup.data.ViewGroupTypes
 import com.star.wars.andromeda.views.text.TypographyStyle
-import com.star.wars.common.addHttps
 import com.star.wars.search.model.CharacterResultItem
 import javax.inject.Inject
 
