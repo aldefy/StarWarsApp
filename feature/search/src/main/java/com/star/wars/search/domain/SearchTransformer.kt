@@ -14,7 +14,6 @@ import javax.inject.Inject
 
 interface SearchTransformer {
     fun results(resultItems: List<CharacterResultItem>): List<ComponentData>
-    fun toHttpUrl(resultItems: List<CharacterResultItem>): List<CharacterResultItem>
 }
 
 class SearchTransformerImpl @Inject constructor() : SearchTransformer {
@@ -23,13 +22,6 @@ class SearchTransformerImpl @Inject constructor() : SearchTransformer {
             .map {
                 toComponentData(result = it)
             }
-    }
-
-    override fun toHttpUrl(resultItems: List<CharacterResultItem>): List<CharacterResultItem> {
-        return resultItems.map { resultItem ->
-            resultItem.url = resultItem.url.addHttps()
-            resultItem
-        }
     }
 
     private fun toComponentData(result: CharacterResultItem): ComponentData {
