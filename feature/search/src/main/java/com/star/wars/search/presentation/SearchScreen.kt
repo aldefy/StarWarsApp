@@ -119,6 +119,7 @@ class SearchScreenImpl : SearchScreen {
             .ofType(SearchState.ShowLoading::class.java)
             .subscribe {
                 binding.loadingView.makeVisible()
+                binding.errorLayout.root.makeGone()
                 binding.contentRV.makeGone()
             }
             .addTo(bag)
@@ -140,6 +141,12 @@ class SearchScreenImpl : SearchScreen {
         observable
             .ofType(SearchState.Error::class.java)
             .subscribe {
+                binding.contentRV.makeGone()
+                with(binding.errorLayout) {
+                    errorMessageText.text = it.errorMessage
+                    errorTitle.text = errorTitle.resources.getString(R.string.error_default_title)
+                    root.makeVisible()
+                }
             }
             .addTo(bag)
     }

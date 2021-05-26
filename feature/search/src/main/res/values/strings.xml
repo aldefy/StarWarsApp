@@ -3,4 +3,6 @@
     <string name="search_character" tools:ignore="ExtraTranslation">Search character</string>
     <string name="navbar_search_title">Star Wars</string>
     <string name="navbar_search_subtitle">Universe</string>
+    <string name="accesibility_errorview">errorView</string>
+    <string name="error_default_title">There seems to be something wrong!!</string>
 </resources>

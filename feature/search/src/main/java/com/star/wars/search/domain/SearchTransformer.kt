@@ -9,6 +9,7 @@ import com.star.wars.andromeda.views.list.internal.component.viewgroup.data.View
 import com.star.wars.andromeda.views.list.internal.component.viewgroup.data.ViewGroupTypes
 import com.star.wars.andromeda.views.text.TypographyStyle
 import com.star.wars.search.model.CharacterResultItem
+import com.star.wars.search.model.SearchEmptyError
 import javax.inject.Inject
 
 interface SearchTransformer {
@@ -16,7 +17,10 @@ interface SearchTransformer {
 }
 
 class SearchTransformerImpl @Inject constructor() : SearchTransformer {
+    @Throws(SearchEmptyError::class)
     override fun results(resultItems: List<CharacterResultItem>): List<ComponentData> {
+        if (resultItems.isEmpty())
+            throw SearchEmptyError()
         return resultItems
             .map {
                 toComponentData(result = it)
