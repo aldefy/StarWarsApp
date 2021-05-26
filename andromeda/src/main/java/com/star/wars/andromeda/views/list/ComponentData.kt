@@ -10,4 +10,5 @@ interface ComponentData : Parcelable {
     val paddingHorizontal: Int
     val paddingVertical: Int
     val gravity: Gravity
+    val extraPayload: Parcelable?
 }

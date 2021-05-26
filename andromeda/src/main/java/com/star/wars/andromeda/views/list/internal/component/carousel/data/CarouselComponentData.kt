@@ -1,5 +1,6 @@
 package com.star.wars.andromeda.views.list.internal.component.carousel.data
 
+import android.os.Parcelable
 import com.star.wars.andromeda.views.list.ComponentData
 import com.star.wars.andromeda.views.list.Gravity
 import com.star.wars.andromeda.views.list.Height
@@ -15,5 +16,6 @@ data class CarouselComponentData(
     override val viewType: String = "carousel",
     override val paddingHorizontal: Int = 0,
     override val paddingVertical: Int = 0,
+    override val extraPayload: Parcelable? = null,
     val children: List<ComponentData> = emptyList()
 ) : ComponentData
