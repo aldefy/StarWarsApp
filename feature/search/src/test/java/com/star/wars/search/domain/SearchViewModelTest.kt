@@ -25,10 +25,11 @@ class SearchViewModelTest : BaseJUnitTest() {
     private val successComponentList =
         mutableListOf<ComponentData>(TextComponentData(id = "testId"))
     private val emptyComponentList = mutableListOf<ComponentData>()
-    private val dummyError = Throwable("mock")
+    private lateinit var dummyError: Throwable
 
     override fun start() {
         vm = SearchViewModel(useCase)
+        dummyError = Throwable("mock")
     }
 
     override fun stop() {
