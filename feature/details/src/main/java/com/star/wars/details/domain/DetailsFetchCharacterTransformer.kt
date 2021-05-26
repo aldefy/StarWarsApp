@@ -62,7 +62,8 @@ class DetailsFetchCharacterTransformerImpl @Inject constructor() :
             width = Width.FILL,
             marginsHorizontal = 16,
             marginsVertical = 8,
-            type = ViewGroupTypes.CARD
+            type = ViewGroupTypes.CARD,
+            extraPayload = result
         )
         val heading2 = TextComponentData(
             id = "details-Heading2",
