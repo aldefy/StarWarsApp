@@ -26,7 +26,15 @@ class DetailsRepositoryImpl @Inject constructor(
     }
 
     override fun fetchSpecies(urls: List<HttpUrl>): Single<DetailsSpeciesCombinedResult> {
-        TODO()
+        return Observable.fromIterable(urls)
+            .flatMapSingle {
+                api.fetchSpecie(it)
+                    .subscribeOn(Schedulers.io())
+            }
+            .toList()
+            .map {
+                DetailsSpeciesCombinedResult(it)
+            }
     }
 
     override fun fetchFilms(urls: List<HttpUrl>): Single<DetailsFilmsCombinedResult> {
