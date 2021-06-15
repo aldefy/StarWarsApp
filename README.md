@@ -199,15 +199,15 @@ Open calendar : [calendar](https://calendly.com/aditlal)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/aldefy/Star-Wars-Universe.svg?style=flat-square
-[contributors-url]: https://github.com/aldefy/Star-Wars-Universe/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/aldefy/Star-Wars-Universe.svg?style=flat-square
-[forks-url]: https://github.com/aldefy/Star-Wars-Universe/network/members
-[stars-shield]: https://img.shields.io/github/stars/aldefy/Star-Wars-Universe.svg?style=flat-square
-[stars-url]: https://github.com/aldefy/Star-Wars-Universe/stargazers
-[issues-shield]: https://img.shields.io/github/issues/aldefy/Star-Wars-Universe.svg?style=flat-square
-[issues-url]: https://github.com/aldefy/Star-Wars-Universe/issues
-[license-shield]: https://img.shields.io/github/license/aldefy/Star-Wars-Universe.svg?style=flat-square
-[license-url]: https://github.com/aldefy/Star-Wars-Universe/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/aldefy/StarWarsApp.svg?style=flat-square
+[contributors-url]: https://github.com/aldefy/StarWarsApp/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/aldefy/StarWarsApp.svg?style=flat-square
+[forks-url]: https://github.com/aldefy/StarWarsApp/network/members
+[stars-shield]: https://img.shields.io/github/stars/aldefy/StarWarsApp.svg?style=flat-square
+[stars-url]: https://github.com/aldefy/StarWarsApp/stargazers
+[issues-shield]: https://img.shields.io/github/issues/aldefy/StarWarsApp.svg?style=flat-square
+[issues-url]: https://github.com/aldefy/StarWarsApp/issues
+[license-shield]: https://img.shields.io/github/license/aldefy/StarWarsApp.svg?style=flat-square
+[license-url]: https://github.com/aldefy/StarWarsApp/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/aditlal
