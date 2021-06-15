@@ -30,7 +30,7 @@ class SearchRepoTest : BaseJUnitTest() {
 
     override fun start() {
         repo = SearchRepositoryImpl(
-            api = api,
+            api = api
         )
     }
 
